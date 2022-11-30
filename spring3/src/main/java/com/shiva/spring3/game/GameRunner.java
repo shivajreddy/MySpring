@@ -2,9 +2,10 @@ package com.shiva.spring3.game;
 
 public class GameRunner {
     // MarioGame game;
-    ContraGame game;
+    // ContraGame game;
+    GamingConsole game;
 
-    public GameRunner(ContraGame game) {
+    public GameRunner(GamingConsole game) {
         this.game = game;
     }
 
