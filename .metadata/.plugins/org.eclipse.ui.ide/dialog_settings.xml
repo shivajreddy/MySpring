@@ -89,4 +89,6 @@
 		<item value="org.eclipse.wst.common.fproj:3.7.3.v202111212041"/>
 		<item value="org.eclipse.wst.xml_ui.feature:3.27.0.v202208280234"/>
 	</list>
+	<section name="NewWizardAction">
+	</section>
 </section>

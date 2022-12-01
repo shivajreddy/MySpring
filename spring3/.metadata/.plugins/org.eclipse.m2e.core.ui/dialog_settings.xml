@@ -2,7 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="/Users/smbp/Desktop/spring3"/>
+			<item value="/Users/smbp/Desktop/MySpring/mysprin3"/>
+			<item value="/Users/smbp/Desktop/MySpring/spring3"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
