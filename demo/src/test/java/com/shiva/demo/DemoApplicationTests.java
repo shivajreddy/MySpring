@@ -1,10 +1,10 @@
-package com.shiva.mysprin3;
+package com.shiva.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Mysprin3ApplicationTests {
+class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
