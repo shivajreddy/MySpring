@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class BusinessCalculationService {
 
     // # create dependency injection
-    public DataService dataService;
+    private final DataService dataService;
 
     // # Injecting using constructor
     @Autowired
