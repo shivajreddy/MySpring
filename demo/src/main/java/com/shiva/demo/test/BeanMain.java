@@ -1,12 +1,7 @@
-package com.shiva.demo;
+package com.shiva.demo.test;
 
-
-import com.shiva.demo.game.MyConfiguration;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import java.io.Serializable;
-import java.util.Arrays;
 
 public class BeanMain {
     public static void main(String[] args) {
@@ -19,11 +14,9 @@ public class BeanMain {
 
         var context = new AnnotationConfigApplicationContext(MyConfiguration.class);
 
-        // System.out.println(context.getBean("bean_name"));
-        // System.out.println(context.getBean("bean_age"));
-
-        // System.out.println(context.getBean(String.class));
         System.out.println(context.getBean("bean_params"));
 
     }
 }
+
+

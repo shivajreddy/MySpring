@@ -3,12 +3,20 @@ package com.shiva.demo;
 import com.shiva.demo.game.ContraGame;
 import com.shiva.demo.game.GameRunner;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 public class Main {
     public static void main(String[] args) {
-        ContraGame contra = new ContraGame();
+        // ContraGame contra = new ContraGame();
+        //
+        // GameRunner runner = new GameRunner(contra);
+        //
+        // runner.run();
 
-        GameRunner runner = new GameRunner(contra);
+        try(var context = new AnnotationConfigApplicationContext(GameConfig.class)){
 
-        runner.run();
+            System.out.println(context.getBean("gaming_console"));
+
+        }
     }
 }

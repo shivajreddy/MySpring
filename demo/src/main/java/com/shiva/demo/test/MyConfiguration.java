@@ -1,4 +1,4 @@
-package com.shiva.demo.game;
+package com.shiva.demo.test;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -16,6 +16,7 @@ record Address(String first_line, String last_line){};
 public class MyConfiguration {
 
     @Bean(name = "bean_name")
+    @Qualifier("qual_name")
     public String name() {
         return "shiva";
     }
@@ -26,14 +27,15 @@ public class MyConfiguration {
     }
 
     @Bean(name = "bean_address")
-    @Qualifier("bean_address")
+    @Qualifier("qual_address")
     public String address(){
         return "4506 monument ave";
     }
 
     @Bean (name ="bean_params")
-    public String bean_using_params(String bean_name, @Qualifier("bean_address") String address){
-        return bean_name + " : " + address;
+    public String bean_using_params(@Qualifier("qual_name") String n, @Qualifier("qual_address") String a){
+        return n + " : " + a;
     }
 
 }
+
