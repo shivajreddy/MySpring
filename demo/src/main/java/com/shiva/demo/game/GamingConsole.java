@@ -6,3 +6,4 @@ public interface GamingConsole {
     void left();
     void right();
 }
+

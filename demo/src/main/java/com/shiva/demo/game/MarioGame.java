@@ -1,29 +1,29 @@
 package com.shiva.demo.game;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-
 @Component
-public class ContraGame implements GamingConsole {
-
+@Qualifier("mario_game")
+public class MarioGame implements GamingConsole {
     @Override
     public void up() {
-        System.out.println("contra up");
+        System.out.println("mario jumps up");
     }
 
     @Override
     public void down() {
-        System.out.println("contra down");
+        System.out.println("mario ducks down");
     }
 
     @Override
     public void left() {
-        System.out.println("contra left");
+        System.out.println("mario slides left");
     }
 
     @Override
     public void right() {
-        System.out.println("contra right");
+        System.out.println("mario slides right");
     }
 }
