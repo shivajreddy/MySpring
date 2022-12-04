@@ -1,33 +1,54 @@
 package com.shiva.demo.app5;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
+
+@Component
+class Dependency1 {
+    public void job(){
+        System.out.println("this is the job of dependency 1");
+    }
+}
 
 
 @Component
 class ClassA {
-}
+    private Dependency1 dependency1;
 
-@Component
-@Lazy
-class ClassB {
-    private ClassA a;
-
-    @Autowired
-    public ClassB(ClassA a) {
-        // # Initialization logic
-        this.a = a;
-
-        System.out.println("finished ClassB initialization");
+    public ClassA(Dependency1 dependency1) {
+        super();
+        this.dependency1 = dependency1;
+        System.out.println("Auto-wiring is finished");
     }
 
-    public void doSomething() {
-        System.out.println("doing something in ClassB");
+    @PostConstruct
+    public void initialize() {
+        System.out.println("initialize 1 method");
     }
+
+    @PostConstruct
+    public void initialize2() {
+        System.out.println("initialize 2 method");
+    }
+
+    @PreDestroy
+    public void cleanUp(){
+        System.out.println("clean up");
+    }
+
+    public void something(){
+        dependency1.job();
+    }
+
 }
 
 
@@ -37,12 +58,7 @@ public class App5Main {
     public static void main(String[] args) {
 
         try (var context = new AnnotationConfigApplicationContext(App5Main.class)) {
-
-
-            System.out.println("Application start up initializations finished");
-
-            context.getBean(ClassB.class).doSomething();
-
+            context.getBean(ClassA.class).something();
         }
 
     }
