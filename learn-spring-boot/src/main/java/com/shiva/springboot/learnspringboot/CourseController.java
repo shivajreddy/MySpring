@@ -57,7 +57,9 @@ public class CourseController {
     public List<Course> getCourses() {
         return Arrays.asList(
                 new Course(1, "Learn AWS", "Ranga"),
-                new Course(2, "Learn Dev", "Ranga")
+                new Course(2, "Learn Dev", "Ranga"),
+                new Course(3, "Learn Dev", "Ranga"),
+                new Course(4, "Learn Dev", "Ranga new2 8")
         );
     }
 
@@ -67,6 +69,7 @@ public class CourseController {
     public ResponseEntity<byte[]> imageEndpoint() throws IOException {
 
         var path = new ClassPathResource("static/images/shiva_memoji.jpg");
+
         // # 2.Create ByteArrayResource for the image at given path
         byte[] bytes = StreamUtils.copyToByteArray(path.getInputStream());
 
