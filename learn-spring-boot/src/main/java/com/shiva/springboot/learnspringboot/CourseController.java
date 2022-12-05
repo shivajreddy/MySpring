@@ -62,12 +62,12 @@ public class CourseController {
     }
 
 
-    // 1. Set the response MIME type
+    // # 1. Set the response MIME type
     @RequestMapping(value = "/image", produces = MediaType.IMAGE_JPEG_VALUE)
     public ResponseEntity<byte[]> imageEndpoint() throws IOException {
 
         var path = new ClassPathResource("static/images/shiva_memoji.jpg");
-        // 2.Create ByteArrayResource for the image at given path
+        // # 2.Create ByteArrayResource for the image at given path
         byte[] bytes = StreamUtils.copyToByteArray(path.getInputStream());
 
         return ResponseEntity
