@@ -1,6 +1,6 @@
 package com.shiva.springboot.learnspringboot;
 
-import org.springframework.core.io.ByteArrayResource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -8,10 +8,7 @@ import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
@@ -48,6 +45,10 @@ class Course {
 
 @RestController
 public class CourseController {
+    public CourseController(AppConfiguration appConfig) {
+        this.appConfig = appConfig;
+    }
+
     @RequestMapping("/")
     public String root() {
         return "SpringBoot3.0";
@@ -77,6 +78,13 @@ public class CourseController {
                 .ok()
                 .contentType(MediaType.IMAGE_JPEG)
                 .body(bytes);
+    }
+
+    private final AppConfiguration appConfig;
+
+    @RequestMapping("/get-port")
+    public String getPort() {
+        return String.valueOf(appConfig.getPort());
     }
 
 }
