@@ -55,7 +55,10 @@ public class CourseController {
 
     @RequestMapping("/courses")
     public List<Course> getCourses() {
-        return Arrays.asList(new Course(1, "Learn AWS", "Ranga"), new Course(2, "Learn Dev", "Ranga"));
+        return Arrays.asList(
+                new Course(1, "Learn AWS", "Ranga"),
+                new Course(2, "Learn Dev", "Ranga")
+        );
     }
 
 
@@ -66,7 +69,6 @@ public class CourseController {
         var path = new ClassPathResource("static/images/shiva_memoji.jpg");
         // 2.Create ByteArrayResource for the image at given path
         byte[] bytes = StreamUtils.copyToByteArray(path.getInputStream());
-        // final ByteArrayResource inputStream = new ByteArrayResource(Files.readAllBytes(Paths.get(path)));
 
         return ResponseEntity
                 .ok()
