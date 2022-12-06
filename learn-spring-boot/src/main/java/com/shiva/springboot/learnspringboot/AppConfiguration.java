@@ -15,6 +15,7 @@ public class AppConfiguration {
     }
 
     public void setPort(int port) {
+        System.out.println("hi");
         this.port = port;
     }
 }
