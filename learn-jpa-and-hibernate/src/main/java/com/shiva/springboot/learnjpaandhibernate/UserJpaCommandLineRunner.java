@@ -22,3 +22,4 @@ public class UserJpaCommandLineRunner implements CommandLineRunner {
 
     }
 }
+
