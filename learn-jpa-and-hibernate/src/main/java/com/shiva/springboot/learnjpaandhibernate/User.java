@@ -1,10 +1,22 @@
 package com.shiva.springboot.learnjpaandhibernate;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity(name = "user_table")
 public class User {
 
+    @Id
     private int id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "age")
     private int age;
+
+    @Column(name = "subscribed")
     private boolean subscribed;
 
     // empty constructor for RowMapper

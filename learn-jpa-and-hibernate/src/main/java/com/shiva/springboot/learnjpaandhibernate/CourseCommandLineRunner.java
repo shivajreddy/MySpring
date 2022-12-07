@@ -17,15 +17,15 @@ public class CourseCommandLineRunner implements CommandLineRunner {
     // command line runner method
     @Override
     public void run(String... args) throws Exception {
-        courseRepository.addRow(new Course(1, "c++", "Bjarne Stroustrup"));
-        courseRepository.addRow(new Course(2, "Java", "James Gosling"));
-        courseRepository.addRow(new Course(3, "Python", "Guido van Rossum"));
-
-        // delete 1st row
-        courseRepository.deleteRowWithId(1);
-
-        System.out.println(courseRepository.selectWithId(2));
-        System.out.println(courseRepository.selectWithId(3));
+        // courseRepository.addRow(new Course(1, "c++", "Bjarne Stroustrup"));
+        // courseRepository.addRow(new Course(2, "Java", "James Gosling"));
+        // courseRepository.addRow(new Course(3, "Python", "Guido van Rossum"));
+        //
+        // // delete 1st row
+        // courseRepository.deleteRowWithId(1);
+        //
+        // System.out.println(courseRepository.selectWithId(2));
+        // System.out.println(courseRepository.selectWithId(3));
     }
 
 }
