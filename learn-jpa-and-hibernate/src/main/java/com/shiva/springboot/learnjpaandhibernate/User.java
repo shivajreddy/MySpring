@@ -13,7 +13,6 @@ public class User {
 
     // constructor for creating user object
     public User(int id, String name, int age, boolean subscribed) {
-    // public User(int id, String name, int age) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -59,9 +58,8 @@ public class User {
                 " id: " + id +
                 " name: " + name +
                 " age: " + age +
-                // " subscribed: " + subscribed +
+                " subscribed: " + subscribed +
                 " ]";
     }
 
 }
-

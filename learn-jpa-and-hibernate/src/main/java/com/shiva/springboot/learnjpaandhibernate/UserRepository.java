@@ -38,15 +38,7 @@ public class UserRepository {
      * methods to communicate with the user table in db
      */
     public void addUser(User user) {
-        System.out.println("added : " + user);
-        // byte isSubscribed;
-        // if (user.isSubscribed()) {
-        //     isSubscribed = 1;
-        // } else {
-        //     isSubscribed = 0;
-        // }
         jdbcTemplate.update(INSERT_QUERY, user.getId(), user.getName(), user.getAge(), user.isSubscribed());
-        // jdbcTemplate.update(INSERT_QUERY, user.getId(), user.getName(), user.getAge());
 
     }
 
@@ -58,4 +50,3 @@ public class UserRepository {
         return jdbcTemplate.queryForObject(SELECT_QUERY, new BeanPropertyRowMapper<>(User.class), userId);
     }
 }
-
