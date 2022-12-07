@@ -5,12 +5,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DemoCommandLineRunner implements CommandLineRunner {
+public class CourseCommandLineRunner implements CommandLineRunner {
 
     private final CourseRepository courseRepository;
 
     @Autowired
-    public DemoCommandLineRunner(CourseRepository courseRepository) {
+    public CourseCommandLineRunner(CourseRepository courseRepository) {
         this.courseRepository = courseRepository;
     }
 
