@@ -1,751 +1,419 @@
-2022-12-08T14:40:22.894-05:00  INFO 16818 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 16818 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T14:40:22.895-05:00  INFO 16818 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T14:40:22.931-05:00  INFO 16818 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T14:40:22.931-05:00  INFO 16818 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T14:40:23.469-05:00  INFO 16818 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T14:40:23.476-05:00  INFO 16818 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T14:40:23.476-05:00  INFO 16818 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T14:40:23.573-05:00  INFO 16818 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T14:40:23.576-05:00  INFO 16818 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T14:40:23.576-05:00  INFO 16818 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 645 ms
-2022-12-08T14:40:23.789-05:00  INFO 16818 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T14:40:23.812-05:00  INFO 16818 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T14:40:23.819-05:00  INFO 16818 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.203 seconds (process running for 1.641)
-2022-12-08T14:40:28.293-05:00  INFO 16818 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T14:40:28.293-05:00  INFO 16818 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T14:40:28.294-05:00  INFO 16818 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T14:40:28.322-05:00 DEBUG 16818 --- [http-nio-8080-exec-1] c.s.w.s.login.LoginController            : ## debug from logger shivax123123
-2022-12-08T14:40:34.469-05:00 DEBUG 16818 --- [http-nio-8080-exec-2] c.s.w.s.login.LoginController            : ## debug from logger shivax123123
-2022-12-08T14:40:37.115-05:00 DEBUG 16818 --- [http-nio-8080-exec-3] c.s.w.s.login.LoginController            : ## debug from logger shivax123123
-2022-12-08T14:40:38.898-05:00 DEBUG 16818 --- [http-nio-8080-exec-4] c.s.w.s.login.LoginController            : ## debug from logger shivax1231231
-2022-12-08T14:40:47.719-05:00 DEBUG 16818 --- [http-nio-8080-exec-5] c.s.w.s.login.LoginController            : ## debug from logger reddy
-2022-12-08T14:41:49.132-05:00  INFO 16838 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 16838 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T14:41:49.134-05:00  INFO 16838 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T14:41:49.172-05:00  INFO 16838 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T14:41:49.190-05:00  INFO 16838 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T14:41:49.747-05:00  INFO 16838 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T14:41:49.754-05:00  INFO 16838 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T14:41:49.754-05:00  INFO 16838 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T14:41:49.860-05:00  INFO 16838 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T14:41:49.863-05:00  INFO 16838 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T14:41:49.864-05:00  INFO 16838 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 674 ms
-2022-12-08T14:41:50.065-05:00  INFO 16838 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T14:41:50.088-05:00  INFO 16838 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T14:41:50.094-05:00  INFO 16838 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.32 seconds (process running for 1.957)
-2022-12-08T14:41:56.849-05:00  INFO 16838 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T14:41:56.849-05:00  INFO 16838 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T14:41:56.850-05:00  INFO 16838 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T14:41:56.876-05:00 DEBUG 16838 --- [http-nio-8080-exec-1] c.s.w.s.login.LoginController            : ## debug from logger boo
-2022-12-08T15:01:55.387-05:00  INFO 16980 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 16980 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:01:55.389-05:00  INFO 16980 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:01:55.427-05:00  INFO 16980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:01:55.427-05:00  INFO 16980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:01:56.087-05:00  INFO 16980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:01:56.095-05:00  INFO 16980 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:01:56.095-05:00  INFO 16980 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:01:56.214-05:00  INFO 16980 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:01:56.217-05:00  INFO 16980 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:01:56.217-05:00  INFO 16980 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 790 ms
-2022-12-08T15:01:56.467-05:00  INFO 16980 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:01:56.497-05:00  INFO 16980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:01:56.505-05:00  INFO 16980 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.403 seconds (process running for 1.876)
-2022-12-08T15:01:57.368-05:00  INFO 16980 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:01:57.369-05:00  INFO 16980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:01:57.370-05:00  INFO 16980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T15:01:57.402-05:00 DEBUG 16980 --- [http-nio-8080-exec-1] c.s.w.s.login.LoginController            : ## This user logged in: boo
-2022-12-08T15:03:04.214-05:00 DEBUG 16980 --- [http-nio-8080-exec-3] c.s.w.s.login.LoginController            : ## This user logged in: boo
-2022-12-08T15:03:05.510-05:00  WARN 16980 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
-2022-12-08T15:16:38.122-05:00  INFO 17078 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17078 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:16:38.124-05:00  INFO 17078 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:16:38.159-05:00  INFO 17078 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:16:38.159-05:00  INFO 17078 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:16:38.859-05:00  INFO 17078 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:16:38.866-05:00  INFO 17078 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:16:38.866-05:00  INFO 17078 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:16:38.991-05:00  INFO 17078 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:16:38.994-05:00  INFO 17078 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:16:38.994-05:00  INFO 17078 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 834 ms
-2022-12-08T15:16:39.219-05:00  INFO 17078 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:16:39.244-05:00  INFO 17078 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:16:39.250-05:00  INFO 17078 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.403 seconds (process running for 1.845)
-2022-12-08T15:16:44.062-05:00  INFO 17078 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:16:44.062-05:00  INFO 17078 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:16:44.063-05:00  INFO 17078 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T15:16:44.099-05:00 DEBUG 17078 --- [http-nio-8080-exec-1] c.s.w.s.login.LoginController            : ## This user logged in: boo
-2022-12-08T15:16:46.843-05:00  WARN 17078 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'name' for method parameter type String is not present]
-2022-12-08T15:17:43.839-05:00  INFO 17096 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17096 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:17:43.841-05:00  INFO 17096 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:17:43.879-05:00  INFO 17096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:17:43.879-05:00  INFO 17096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:17:44.434-05:00  INFO 17096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:17:44.441-05:00  INFO 17096 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:17:44.441-05:00  INFO 17096 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:17:44.536-05:00  INFO 17096 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:17:44.539-05:00  INFO 17096 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:17:44.540-05:00  INFO 17096 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 660 ms
-2022-12-08T15:17:44.750-05:00  INFO 17096 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:17:44.773-05:00  INFO 17096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:17:44.780-05:00  INFO 17096 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.221 seconds (process running for 1.653)
-2022-12-08T15:17:46.993-05:00  INFO 17096 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:17:46.993-05:00  INFO 17096 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:17:46.994-05:00  INFO 17096 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T15:18:23.827-05:00  INFO 17114 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17114 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:18:23.828-05:00  INFO 17114 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:18:23.861-05:00  INFO 17114 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:18:23.861-05:00  INFO 17114 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:18:24.423-05:00  INFO 17114 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:18:24.430-05:00  INFO 17114 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:18:24.430-05:00  INFO 17114 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:18:24.533-05:00  INFO 17114 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:18:24.536-05:00  INFO 17114 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:18:24.536-05:00  INFO 17114 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 675 ms
-2022-12-08T15:18:24.751-05:00  INFO 17114 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:18:24.774-05:00  INFO 17114 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:18:24.780-05:00  INFO 17114 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.214 seconds (process running for 1.728)
-2022-12-08T15:18:26.141-05:00  INFO 17114 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:18:26.141-05:00  INFO 17114 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:18:26.142-05:00  INFO 17114 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-12-08T15:19:03.442-05:00  INFO 17128 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17128 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:19:03.444-05:00  INFO 17128 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:19:03.477-05:00  INFO 17128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:19:03.477-05:00  INFO 17128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:19:04.008-05:00  INFO 17128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:19:04.015-05:00  INFO 17128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:19:04.015-05:00  INFO 17128 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:19:04.116-05:00  INFO 17128 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:19:04.119-05:00  INFO 17128 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:19:04.119-05:00  INFO 17128 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 642 ms
-2022-12-08T15:19:04.369-05:00  INFO 17128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:19:04.396-05:00  INFO 17128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:19:04.403-05:00  INFO 17128 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.225 seconds (process running for 1.621)
-2022-12-08T15:19:05.194-05:00  INFO 17128 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:19:05.195-05:00  INFO 17128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:19:05.196-05:00  INFO 17128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T15:26:37.761-05:00  INFO 17184 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17184 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:26:37.763-05:00  INFO 17184 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:26:37.797-05:00  INFO 17184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:26:37.797-05:00  INFO 17184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:26:38.396-05:00  INFO 17184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:26:38.402-05:00  INFO 17184 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:26:38.403-05:00  INFO 17184 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:26:38.518-05:00  INFO 17184 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:26:38.521-05:00  INFO 17184 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:26:38.521-05:00  INFO 17184 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 723 ms
-2022-12-08T15:26:38.760-05:00  INFO 17184 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:26:38.785-05:00  INFO 17184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:26:38.792-05:00  INFO 17184 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.309 seconds (process running for 1.877)
-2022-12-08T15:26:56.983-05:00  INFO 17184 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:26:56.983-05:00  INFO 17184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:26:56.984-05:00  INFO 17184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T15:27:36.942-05:00  INFO 17198 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17198 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:27:36.944-05:00  INFO 17198 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:27:36.981-05:00  INFO 17198 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:27:36.982-05:00  INFO 17198 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:27:37.579-05:00  INFO 17198 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:27:37.586-05:00  INFO 17198 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:27:37.586-05:00  INFO 17198 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:27:37.707-05:00  INFO 17198 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:27:37.711-05:00  INFO 17198 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:27:37.712-05:00  INFO 17198 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 729 ms
-2022-12-08T15:27:37.950-05:00  INFO 17198 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:27:37.975-05:00  INFO 17198 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:27:37.982-05:00  INFO 17198 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.349 seconds (process running for 2.603)
-2022-12-08T15:27:42.013-05:00  INFO 17198 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:27:42.013-05:00  INFO 17198 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:27:42.014-05:00  INFO 17198 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-12-08T15:29:25.669-05:00  INFO 17213 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17213 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:29:25.670-05:00  INFO 17213 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:29:25.702-05:00  INFO 17213 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:29:25.704-05:00  INFO 17213 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:29:26.265-05:00  INFO 17213 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:29:26.272-05:00  INFO 17213 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:29:26.272-05:00  INFO 17213 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:29:26.386-05:00  INFO 17213 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:29:26.389-05:00  INFO 17213 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:29:26.389-05:00  INFO 17213 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 685 ms
-2022-12-08T15:29:26.623-05:00  INFO 17213 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:29:26.649-05:00  INFO 17213 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:29:26.656-05:00  INFO 17213 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.266 seconds (process running for 1.874)
-2022-12-08T15:29:28.397-05:00  INFO 17213 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:29:28.398-05:00  INFO 17213 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:29:28.398-05:00  INFO 17213 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-12-08T15:29:48.476-05:00  INFO 17216 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17216 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:29:48.479-05:00  INFO 17216 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:29:48.548-05:00  INFO 17216 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:29:48.548-05:00  INFO 17216 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:29:49.196-05:00  INFO 17216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:29:49.203-05:00  INFO 17216 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:29:49.203-05:00  INFO 17216 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:29:49.326-05:00  INFO 17216 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:29:49.329-05:00  INFO 17216 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:29:49.330-05:00  INFO 17216 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 782 ms
-2022-12-08T15:29:49.591-05:00  INFO 17216 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:29:49.622-05:00  INFO 17216 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:29:49.629-05:00  INFO 17216 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.551 seconds (process running for 2.431)
-2022-12-08T15:29:51.216-05:00  INFO 17216 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:29:51.216-05:00  INFO 17216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:29:51.217-05:00  INFO 17216 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T15:32:41.441-05:00  INFO 17249 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17249 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:32:41.442-05:00  INFO 17249 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:32:41.473-05:00  INFO 17249 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:32:41.474-05:00  INFO 17249 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:32:42.016-05:00  INFO 17249 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:32:42.023-05:00  INFO 17249 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:32:42.023-05:00  INFO 17249 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:32:42.132-05:00  INFO 17249 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:32:42.135-05:00  INFO 17249 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:32:42.135-05:00  INFO 17249 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 661 ms
-2022-12-08T15:32:42.334-05:00  INFO 17249 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:32:42.356-05:00  INFO 17249 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:32:42.362-05:00  INFO 17249 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.212 seconds (process running for 1.792)
-2022-12-08T15:32:43.581-05:00  INFO 17249 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:32:43.581-05:00  INFO 17249 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:32:43.582-05:00  INFO 17249 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T15:33:47.070-05:00  INFO 17266 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17266 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:33:47.071-05:00  INFO 17266 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:33:47.108-05:00  INFO 17266 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:33:47.108-05:00  INFO 17266 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:33:47.647-05:00  INFO 17266 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:33:47.654-05:00  INFO 17266 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:33:47.654-05:00  INFO 17266 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:33:47.750-05:00  INFO 17266 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:33:47.753-05:00  INFO 17266 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:33:47.754-05:00  INFO 17266 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 645 ms
-2022-12-08T15:33:47.965-05:00  INFO 17266 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:33:47.988-05:00  INFO 17266 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:33:47.994-05:00  INFO 17266 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.213 seconds (process running for 1.618)
-2022-12-08T15:33:52.504-05:00  INFO 17266 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:33:52.505-05:00  INFO 17266 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:33:52.506-05:00  INFO 17266 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T15:35:29.418-05:00  INFO 17284 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17284 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T15:35:29.419-05:00  INFO 17284 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T15:35:29.450-05:00  INFO 17284 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T15:35:29.451-05:00  INFO 17284 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T15:35:29.982-05:00  INFO 17284 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T15:35:29.988-05:00  INFO 17284 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T15:35:29.989-05:00  INFO 17284 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T15:35:30.086-05:00  INFO 17284 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T15:35:30.089-05:00  INFO 17284 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T15:35:30.089-05:00  INFO 17284 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 638 ms
-2022-12-08T15:35:30.298-05:00  INFO 17284 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T15:35:30.321-05:00  INFO 17284 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T15:35:30.327-05:00  INFO 17284 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.175 seconds (process running for 1.838)
-2022-12-08T15:56:37.486-05:00  INFO 17284 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T15:56:37.486-05:00  INFO 17284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T15:56:37.487-05:00  INFO 17284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-12-08T16:05:57.502-05:00  INFO 17284 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (1 addition, 0 deletions, 4 modifications)
-2022-12-08T16:05:57.513-05:00  INFO 17284 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-12-08T16:05:57.515-05:00  INFO 17284 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2022-12-08T16:05:57.582-05:00  INFO 17284 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17284 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T16:05:57.582-05:00  INFO 17284 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T16:05:57.745-05:00  INFO 17284 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T16:05:57.745-05:00  INFO 17284 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T16:05:57.745-05:00  INFO 17284 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T16:05:57.776-05:00  INFO 17284 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T16:05:57.777-05:00  INFO 17284 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T16:05:57.777-05:00  INFO 17284 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 193 ms
-2022-12-08T16:05:57.847-05:00  INFO 17284 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T16:05:57.859-05:00  INFO 17284 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T16:05:57.863-05:00  INFO 17284 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.301 seconds (process running for 1829.341)
-2022-12-08T16:05:57.865-05:00  INFO 17284 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-12-08T16:06:00.928-05:00  INFO 17284 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T16:06:00.929-05:00  INFO 17284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T16:06:00.929-05:00  INFO 17284 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-12-08T16:06:04.587-05:00 ERROR 17284 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.shiva.webapp.springwebapp.login.AuthenticationService.authenticate(String, String)" because "this.authenticationService" is null] with root cause
+2022-12-09T05:22:20.927-05:00  INFO 19812 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 19812 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T05:22:20.933-05:00  INFO 19812 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T05:22:20.967-05:00  INFO 19812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T05:22:20.967-05:00  INFO 19812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T05:22:21.764-05:00  INFO 19812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T05:22:21.793-05:00  INFO 19812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T05:22:21.804-05:00  INFO 19812 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T05:22:21.940-05:00  INFO 19812 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T05:22:21.946-05:00  INFO 19812 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T05:22:21.947-05:00  INFO 19812 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 979 ms
+2022-12-09T05:22:22.020-05:00  WARN 19812 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'todoService' defined in file [/Users/smbp/Desktop/MySpring/spring-webapp/target/classes/com/shiva/webapp/springwebapp/login/Todo/TodoService.class]: null
+2022-12-09T05:22:22.022-05:00  INFO 19812 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-09T05:22:22.035-05:00  INFO 19812 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
-java.lang.NullPointerException: Cannot invoke "com.shiva.webapp.springwebapp.login.AuthenticationService.authenticate(String, String)" because "this.authenticationService" is null
-	at com.shiva.webapp.springwebapp.login.LoginController.welcomePage(LoginController.java:28) ~[classes/:na]
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2022-12-09T05:22:22.054-05:00 ERROR 19812 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'todoService' defined in file [/Users/smbp/Desktop/MySpring/spring-webapp/target/classes/com/shiva/webapp/springwebapp/login/Todo/TodoService.class]: null
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915) ~[spring-context-6.0.2.jar:6.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.2.jar:6.0.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.0.jar:3.0.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.0.jar:3.0.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.0.jar:3.0.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.0.jar:3.0.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.0.jar:3.0.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.0.jar:3.0.0]
+	at com.shiva.webapp.springwebapp.SpringWebappApplication.main(SpringWebappApplication.java:10) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.0.jar:3.0.0]
+Caused by: java.lang.ExceptionInInitializerError: null
+	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method) ~[na:na]
+	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1160) ~[na:na]
+	at java.base/jdk.internal.reflect.MethodHandleAccessorFactory.ensureClassInitialized(MethodHandleAccessorFactory.java:300) ~[na:na]
+	at java.base/jdk.internal.reflect.MethodHandleAccessorFactory.newConstructorAccessor(MethodHandleAccessorFactory.java:103) ~[na:na]
+	at java.base/jdk.internal.reflect.ReflectionFactory.newConstructorAccessor(ReflectionFactory.java:201) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.acquireConstructorAccessor(Constructor.java:547) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:497) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.2.jar:6.0.2]
+	... 20 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because "com.shiva.webapp.springwebapp.login.Todo.TodoService.todos" is null
+	at com.shiva.webapp.springwebapp.login.Todo.TodoService.<clinit>(TodoService.java:19) ~[classes/:na]
+	... 31 common frames omitted
 
-2022-12-08T16:07:01.958-05:00  INFO 17748 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17748 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T16:07:01.959-05:00  INFO 17748 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T16:07:01.993-05:00  INFO 17748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T16:07:01.993-05:00  INFO 17748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T16:07:02.729-05:00  INFO 17748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T16:07:02.736-05:00  INFO 17748 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T16:07:02.736-05:00  INFO 17748 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T16:07:02.849-05:00  INFO 17748 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T16:07:02.852-05:00  INFO 17748 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T16:07:02.852-05:00  INFO 17748 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 859 ms
-2022-12-08T16:07:03.089-05:00  INFO 17748 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T16:07:03.113-05:00  INFO 17748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T16:07:03.119-05:00  INFO 17748 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.438 seconds (process running for 2.042)
-2022-12-08T16:07:06.481-05:00  INFO 17748 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T16:07:06.481-05:00  INFO 17748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T16:07:06.482-05:00  INFO 17748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T16:07:08.520-05:00 ERROR 17748 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/].[jsp]        : Servlet.service() for servlet [jsp] threw exception
-
-org.apache.jasper.JasperException: /WEB-INF/jsp/welcome.jsp (line: [1], column: [2]) JSP file [common/header.jspf] not found
-	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:292) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:98) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Parser.processIncludeDirective(Parser.java:343) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Parser.parseIncludeDirective(Parser.java:378) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Parser.parseDirective(Parser.java:479) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Parser.parseFileDirectives(Parser.java:1796) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Parser.parse(Parser.java:135) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:245) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.ParserController.parseDirectives(ParserController.java:128) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:206) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:395) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:371) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:355) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:691) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:441) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:367) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:295) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2022-12-08T16:07:08.525-05:00 ERROR 17748 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [/WEB-INF/jsp/welcome.jsp (line: [1], column: [2]) JSP file [common/header.jspf] not found] with root cause
-
-org.apache.jasper.JasperException: /WEB-INF/jsp/welcome.jsp (line: [1], column: [2]) JSP file [common/header.jspf] not found
-	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:41) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:292) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:98) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Parser.processIncludeDirective(Parser.java:343) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Parser.parseIncludeDirective(Parser.java:378) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Parser.parseDirective(Parser.java:479) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Parser.parseFileDirectives(Parser.java:1796) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Parser.parse(Parser.java:135) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:245) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.ParserController.parseDirectives(ParserController.java:128) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:206) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:395) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:371) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:355) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328) ~[tomcat-embed-jasper-10.1.1.jar:10.1.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:691) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:441) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:367) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:295) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1414) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1158) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1097) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2022-12-08T16:09:07.858-05:00  INFO 17779 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17779 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T16:09:07.861-05:00  INFO 17779 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T16:09:07.909-05:00  INFO 17779 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T16:09:07.910-05:00  INFO 17779 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T16:09:08.607-05:00  INFO 17779 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T16:09:08.613-05:00  INFO 17779 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T16:09:08.614-05:00  INFO 17779 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T16:09:08.724-05:00  INFO 17779 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T16:09:08.727-05:00  INFO 17779 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T16:09:08.727-05:00  INFO 17779 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 816 ms
-2022-12-08T16:09:08.926-05:00  INFO 17779 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T16:09:08.947-05:00  INFO 17779 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T16:09:08.954-05:00  INFO 17779 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.392 seconds (process running for 2.008)
-2022-12-08T16:09:09.032-05:00  INFO 17779 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T16:09:09.033-05:00  INFO 17779 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T16:09:09.034-05:00  INFO 17779 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T16:09:13.472-05:00 ERROR 17779 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.shiva.webapp.springwebapp.login.AuthenticationService.authenticate(String, String)" because "this.authenticationService" is null] with root cause
-
-java.lang.NullPointerException: Cannot invoke "com.shiva.webapp.springwebapp.login.AuthenticationService.authenticate(String, String)" because "this.authenticationService" is null
-	at com.shiva.webapp.springwebapp.login.LoginController.welcomePage(LoginController.java:30) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2022-12-08T16:10:07.961-05:00  INFO 17804 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17804 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T16:10:07.962-05:00  INFO 17804 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T16:10:07.995-05:00  INFO 17804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T16:10:07.995-05:00  INFO 17804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T16:10:08.537-05:00  INFO 17804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T16:10:08.544-05:00  INFO 17804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T16:10:08.544-05:00  INFO 17804 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T16:10:08.642-05:00  INFO 17804 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T16:10:08.645-05:00  INFO 17804 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T16:10:08.645-05:00  INFO 17804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 649 ms
-2022-12-08T16:10:08.856-05:00  INFO 17804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T16:10:08.879-05:00  INFO 17804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T16:10:08.885-05:00  INFO 17804 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.191 seconds (process running for 1.597)
-2022-12-08T16:10:15.557-05:00  INFO 17804 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T16:10:15.558-05:00  INFO 17804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T16:10:15.559-05:00  INFO 17804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T16:10:23.768-05:00  INFO 17804 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2022-12-08T16:10:23.776-05:00  INFO 17804 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-12-08T16:10:23.777-05:00  INFO 17804 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2022-12-08T16:10:23.842-05:00  INFO 17804 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17804 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T16:10:23.842-05:00  INFO 17804 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T16:10:23.988-05:00  INFO 17804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T16:10:23.989-05:00  INFO 17804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T16:10:23.989-05:00  INFO 17804 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T16:10:24.034-05:00  INFO 17804 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T16:10:24.036-05:00  INFO 17804 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T16:10:24.037-05:00  INFO 17804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 192 ms
-2022-12-08T16:10:24.145-05:00  INFO 17804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T16:10:24.153-05:00  INFO 17804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T16:10:24.157-05:00  INFO 17804 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.338 seconds (process running for 16.868)
-2022-12-08T16:10:24.159-05:00  INFO 17804 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-12-08T16:10:25.295-05:00  INFO 17804 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T16:10:25.296-05:00  INFO 17804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T16:10:25.296-05:00  INFO 17804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-12-08T16:10:27.293-05:00 ERROR 17804 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.shiva.webapp.springwebapp.login.AuthenticationService.authenticate(String, String)" because "this.authenticationService" is null] with root cause
-
-java.lang.NullPointerException: Cannot invoke "com.shiva.webapp.springwebapp.login.AuthenticationService.authenticate(String, String)" because "this.authenticationService" is null
-	at com.shiva.webapp.springwebapp.login.LoginController.welcomePage(LoginController.java:31) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2022-12-08T16:10:39.048-05:00  INFO 17804 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
-2022-12-08T16:10:39.052-05:00  INFO 17804 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-12-08T16:10:39.053-05:00  INFO 17804 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2022-12-08T16:10:39.108-05:00  INFO 17804 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 17804 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T16:10:39.108-05:00  INFO 17804 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T16:10:39.199-05:00  INFO 17804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T16:10:39.200-05:00  INFO 17804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T16:10:39.200-05:00  INFO 17804 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T16:10:39.217-05:00  INFO 17804 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T16:10:39.218-05:00  INFO 17804 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T16:10:39.218-05:00  INFO 17804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 109 ms
-2022-12-08T16:10:39.255-05:00  INFO 17804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T16:10:39.261-05:00  INFO 17804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T16:10:39.264-05:00  INFO 17804 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.171 seconds (process running for 31.975)
-2022-12-08T16:10:39.265-05:00  INFO 17804 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2022-12-08T16:10:40.190-05:00  INFO 17804 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T16:10:40.190-05:00  INFO 17804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T16:10:40.190-05:00  INFO 17804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-12-08T19:53:28.656-05:00  INFO 19071 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 19071 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T19:53:28.661-05:00  INFO 19071 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T19:53:28.741-05:00  INFO 19071 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T19:53:28.742-05:00  INFO 19071 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T19:53:29.440-05:00  INFO 19071 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T19:53:29.447-05:00  INFO 19071 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T19:53:29.447-05:00  INFO 19071 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T19:53:29.585-05:00  INFO 19071 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T19:53:29.589-05:00  INFO 19071 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T19:53:29.589-05:00  INFO 19071 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 846 ms
-2022-12-08T19:53:29.843-05:00  INFO 19071 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T19:53:29.869-05:00  INFO 19071 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T19:53:29.876-05:00  INFO 19071 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.635 seconds (process running for 2.374)
-2022-12-08T19:53:59.547-05:00  INFO 19071 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T19:53:59.547-05:00  INFO 19071 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T19:53:59.548-05:00  INFO 19071 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T19:55:00.480-05:00 ERROR 19071 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.shiva.webapp.springwebapp.login.AuthenticationService.authenticate(String, String)" because "this.authenticationService" is null] with root cause
-
-java.lang.NullPointerException: Cannot invoke "com.shiva.webapp.springwebapp.login.AuthenticationService.authenticate(String, String)" because "this.authenticationService" is null
-	at com.shiva.webapp.springwebapp.login.LoginController.welcomePage(LoginController.java:29) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
-
-2022-12-08T19:55:14.715-05:00  INFO 19089 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 19089 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
-2022-12-08T19:55:14.717-05:00  INFO 19089 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T19:55:14.754-05:00  INFO 19089 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-12-08T19:55:14.754-05:00  INFO 19089 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-12-08T19:55:15.335-05:00  INFO 19089 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T19:55:15.342-05:00  INFO 19089 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T19:55:15.342-05:00  INFO 19089 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T19:55:15.443-05:00  INFO 19089 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2022-12-08T19:55:15.447-05:00  INFO 19089 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T19:55:15.448-05:00  INFO 19089 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 694 ms
-2022-12-08T19:55:15.707-05:00  INFO 19089 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-12-08T19:55:15.739-05:00  INFO 19089 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T19:55:15.747-05:00  INFO 19089 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.312 seconds (process running for 1.793)
-2022-12-08T19:56:19.875-05:00  INFO 19089 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T19:56:19.876-05:00  INFO 19089 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T19:56:19.876-05:00  INFO 19089 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-12-09T05:24:04.174-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 19851 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T05:24:04.176-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T05:24:04.208-05:00  INFO 19851 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T05:24:04.208-05:00  INFO 19851 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T05:24:04.727-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T05:24:04.733-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T05:24:04.734-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T05:24:04.832-05:00  INFO 19851 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T05:24:04.835-05:00  INFO 19851 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T05:24:04.835-05:00  INFO 19851 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 627 ms
+2022-12-09T05:24:05.081-05:00  INFO 19851 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T05:24:05.104-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T05:24:05.110-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.187 seconds (process running for 1.618)
+2022-12-09T05:24:12.177-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T05:24:12.177-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T05:24:12.178-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T05:25:46.598-05:00  INFO 19851 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2022-12-09T05:25:46.602-05:00  INFO 19851 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-09T05:25:46.603-05:00  INFO 19851 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-09T05:25:46.651-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 19851 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T05:25:46.651-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T05:25:46.752-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T05:25:46.752-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T05:25:46.752-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T05:25:46.772-05:00  INFO 19851 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T05:25:46.773-05:00  INFO 19851 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T05:25:46.773-05:00  INFO 19851 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 120 ms
+2022-12-09T05:25:46.814-05:00  INFO 19851 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T05:25:46.821-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T05:25:46.824-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.189 seconds (process running for 103.331)
+2022-12-09T05:25:46.825-05:00  INFO 19851 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-12-09T05:25:46.869-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T05:25:46.869-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T05:25:46.870-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T05:27:17.216-05:00  INFO 19851 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-12-09T05:27:17.219-05:00  INFO 19851 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-09T05:27:17.220-05:00  INFO 19851 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-09T05:27:17.274-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 19851 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T05:27:17.274-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T05:27:17.360-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T05:27:17.361-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T05:27:17.361-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T05:27:17.379-05:00  INFO 19851 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T05:27:17.379-05:00  INFO 19851 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T05:27:17.379-05:00  INFO 19851 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 103 ms
+2022-12-09T05:27:17.434-05:00  INFO 19851 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T05:27:17.442-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T05:27:17.445-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.185 seconds (process running for 193.952)
+2022-12-09T05:27:17.446-05:00  INFO 19851 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-12-09T05:27:17.668-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T05:27:17.668-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T05:27:17.670-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T05:29:02.994-05:00  INFO 19851 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-12-09T05:29:02.997-05:00  INFO 19851 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-09T05:29:02.997-05:00  INFO 19851 --- [Thread-11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-09T05:29:03.040-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 19851 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T05:29:03.040-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T05:29:03.129-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T05:29:03.130-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T05:29:03.130-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T05:29:03.149-05:00  INFO 19851 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T05:29:03.150-05:00  INFO 19851 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T05:29:03.150-05:00  INFO 19851 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 108 ms
+2022-12-09T05:29:03.188-05:00  INFO 19851 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T05:29:03.193-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T05:29:03.196-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.17 seconds (process running for 299.703)
+2022-12-09T05:29:03.197-05:00  INFO 19851 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-12-09T05:29:04.290-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T05:29:04.290-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T05:29:04.290-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-12-09T05:33:11.858-05:00  INFO 19851 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 1 deletion, 1 modification)
+2022-12-09T05:33:11.862-05:00  INFO 19851 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-09T05:33:11.863-05:00  INFO 19851 --- [Thread-15] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-09T05:33:11.922-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 19851 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T05:33:11.923-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T05:33:12.086-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T05:33:12.087-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T05:33:12.087-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T05:33:12.122-05:00  INFO 19851 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T05:33:12.123-05:00  INFO 19851 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T05:33:12.124-05:00  INFO 19851 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 199 ms
+2022-12-09T05:33:12.185-05:00  INFO 19851 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T05:33:12.193-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T05:33:12.196-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.289 seconds (process running for 548.701)
+2022-12-09T05:33:12.198-05:00  INFO 19851 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-12-09T05:33:12.320-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T05:33:12.321-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T05:33:12.323-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T05:33:13.594-05:00  INFO 19851 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2022-12-09T05:33:13.597-05:00  INFO 19851 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-09T05:33:13.597-05:00  INFO 19851 --- [Thread-19] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-09T05:33:13.675-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 19851 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T05:33:13.675-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T05:33:13.826-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T05:33:13.827-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T05:33:13.827-05:00  INFO 19851 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T05:33:13.854-05:00  INFO 19851 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T05:33:13.854-05:00  INFO 19851 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T05:33:13.854-05:00  INFO 19851 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 177 ms
+2022-12-09T05:33:13.901-05:00  INFO 19851 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T05:33:13.908-05:00  INFO 19851 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T05:33:13.911-05:00  INFO 19851 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.264 seconds (process running for 550.416)
+2022-12-09T05:33:13.912-05:00  INFO 19851 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-12-09T05:33:14.658-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T05:33:14.659-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T05:33:14.659-05:00  INFO 19851 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-12-09T05:51:33.438-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20113 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T05:51:33.440-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T05:51:33.471-05:00  INFO 20113 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T05:51:33.471-05:00  INFO 20113 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T05:51:34.002-05:00  INFO 20113 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T05:51:34.008-05:00  INFO 20113 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T05:51:34.008-05:00  INFO 20113 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T05:51:34.169-05:00  INFO 20113 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T05:51:34.175-05:00  INFO 20113 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T05:51:34.175-05:00  INFO 20113 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 704 ms
+2022-12-09T05:51:34.370-05:00  INFO 20113 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T05:51:34.390-05:00  INFO 20113 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T05:51:34.395-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.222 seconds (process running for 1.697)
+2022-12-09T05:51:35.723-05:00  INFO 20113 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T05:51:35.723-05:00  INFO 20113 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T05:51:35.724-05:00  INFO 20113 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T05:55:06.746-05:00  INFO 20113 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2022-12-09T05:55:06.752-05:00  INFO 20113 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-09T05:55:06.753-05:00  INFO 20113 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-09T05:55:06.817-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20113 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T05:55:06.818-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T05:55:06.954-05:00  INFO 20113 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T05:55:06.954-05:00  INFO 20113 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T05:55:06.954-05:00  INFO 20113 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T05:55:07.059-05:00  INFO 20113 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T05:55:07.062-05:00  INFO 20113 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T05:55:07.063-05:00  INFO 20113 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 241 ms
+2022-12-09T05:55:07.119-05:00  INFO 20113 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T05:55:07.125-05:00  INFO 20113 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T05:55:07.130-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.34 seconds (process running for 214.431)
+2022-12-09T05:55:07.131-05:00  INFO 20113 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-12-09T05:55:08.531-05:00  INFO 20113 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2022-12-09T05:55:08.533-05:00  INFO 20113 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-09T05:55:08.587-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20113 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T05:55:08.587-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T05:55:08.713-05:00  INFO 20113 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T05:55:08.714-05:00  INFO 20113 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T05:55:08.714-05:00  INFO 20113 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T05:55:08.759-05:00  INFO 20113 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T05:55:08.761-05:00  INFO 20113 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T05:55:08.761-05:00  INFO 20113 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 173 ms
+2022-12-09T05:55:08.806-05:00  INFO 20113 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T05:55:08.812-05:00  INFO 20113 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T05:55:08.815-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.244 seconds (process running for 216.116)
+2022-12-09T05:55:08.816-05:00  INFO 20113 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-12-09T05:55:19.142-05:00  INFO 20113 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T05:55:19.143-05:00  INFO 20113 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T05:55:19.145-05:00  INFO 20113 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T06:00:13.276-05:00  INFO 20113 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 1 deletion, 3 modifications)
+2022-12-09T06:00:13.280-05:00  INFO 20113 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-09T06:00:13.280-05:00  INFO 20113 --- [Thread-11] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-09T06:00:13.345-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20113 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T06:00:13.345-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T06:00:13.493-05:00  INFO 20113 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T06:00:13.494-05:00  INFO 20113 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T06:00:13.494-05:00  INFO 20113 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T06:00:13.557-05:00  INFO 20113 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T06:00:13.560-05:00  INFO 20113 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T06:00:13.560-05:00  INFO 20113 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 212 ms
+2022-12-09T06:00:13.616-05:00  INFO 20113 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T06:00:13.622-05:00  INFO 20113 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T06:00:13.625-05:00  INFO 20113 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.304 seconds (process running for 520.918)
+2022-12-09T06:00:13.626-05:00  INFO 20113 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-12-09T06:04:18.315-05:00  INFO 20192 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20192 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T06:04:18.317-05:00  INFO 20192 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T06:04:18.350-05:00  INFO 20192 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T06:04:18.350-05:00  INFO 20192 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T06:04:18.977-05:00  INFO 20192 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T06:04:18.984-05:00  INFO 20192 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T06:04:18.984-05:00  INFO 20192 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T06:04:19.131-05:00  INFO 20192 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T06:04:19.135-05:00  INFO 20192 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T06:04:19.136-05:00  INFO 20192 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 785 ms
+2022-12-09T06:04:19.377-05:00  INFO 20192 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T06:04:19.404-05:00  INFO 20192 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T06:04:19.411-05:00  INFO 20192 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.388 seconds (process running for 1.996)
+2022-12-09T06:04:22.605-05:00  INFO 20192 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T06:04:22.605-05:00  INFO 20192 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T06:04:22.606-05:00  INFO 20192 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-12-09T06:05:04.118-05:00  INFO 20201 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20201 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T06:05:04.120-05:00  INFO 20201 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T06:05:04.152-05:00  INFO 20201 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T06:05:04.152-05:00  INFO 20201 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T06:05:04.679-05:00  INFO 20201 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T06:05:04.686-05:00  INFO 20201 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T06:05:04.686-05:00  INFO 20201 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T06:05:04.825-05:00  INFO 20201 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T06:05:04.833-05:00  INFO 20201 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T06:05:04.833-05:00  INFO 20201 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 681 ms
+2022-12-09T06:05:05.028-05:00  INFO 20201 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T06:05:05.050-05:00  INFO 20201 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T06:05:05.056-05:00  INFO 20201 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.191 seconds (process running for 1.633)
+2022-12-09T06:05:08.562-05:00  INFO 20201 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T06:05:08.563-05:00  INFO 20201 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T06:05:08.564-05:00  INFO 20201 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T06:06:41.470-05:00  INFO 20217 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20217 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T06:06:41.471-05:00  INFO 20217 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T06:06:41.502-05:00  INFO 20217 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T06:06:41.502-05:00  INFO 20217 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T06:06:42.062-05:00  INFO 20217 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T06:06:42.069-05:00  INFO 20217 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T06:06:42.069-05:00  INFO 20217 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T06:06:42.256-05:00  INFO 20217 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T06:06:42.268-05:00  INFO 20217 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T06:06:42.269-05:00  INFO 20217 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 765 ms
+2022-12-09T06:06:42.592-05:00  INFO 20217 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T06:06:42.624-05:00  INFO 20217 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T06:06:42.632-05:00  INFO 20217 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.412 seconds (process running for 2.034)
+2022-12-09T06:06:44.121-05:00  INFO 20217 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T06:06:44.122-05:00  INFO 20217 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T06:06:44.122-05:00  INFO 20217 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-12-09T06:07:53.147-05:00  INFO 20235 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20235 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T06:07:53.149-05:00  INFO 20235 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T06:07:53.184-05:00  INFO 20235 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T06:07:53.184-05:00  INFO 20235 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T06:07:53.819-05:00  INFO 20235 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T06:07:53.827-05:00  INFO 20235 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T06:07:53.827-05:00  INFO 20235 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T06:07:53.989-05:00  INFO 20235 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T06:07:53.994-05:00  INFO 20235 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T06:07:53.994-05:00  INFO 20235 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 810 ms
+2022-12-09T06:07:54.263-05:00  INFO 20235 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T06:07:54.294-05:00  INFO 20235 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T06:07:54.301-05:00  INFO 20235 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.42 seconds (process running for 1.866)
+2022-12-09T06:08:06.026-05:00  INFO 20235 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T06:08:06.027-05:00  INFO 20235 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T06:08:06.028-05:00  INFO 20235 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T06:28:14.643-05:00  INFO 20395 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20395 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T06:28:14.645-05:00  INFO 20395 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T06:28:14.677-05:00  INFO 20395 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T06:28:14.677-05:00  INFO 20395 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T06:28:15.272-05:00  INFO 20395 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T06:28:15.279-05:00  INFO 20395 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T06:28:15.280-05:00  INFO 20395 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T06:28:15.426-05:00  INFO 20395 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T06:28:15.431-05:00  INFO 20395 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T06:28:15.431-05:00  INFO 20395 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 754 ms
+2022-12-09T06:28:15.680-05:00  INFO 20395 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T06:28:15.705-05:00  INFO 20395 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T06:28:15.711-05:00  INFO 20395 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.35 seconds (process running for 1.87)
+2022-12-09T06:28:17.216-05:00  INFO 20395 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T06:28:17.217-05:00  INFO 20395 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T06:28:17.218-05:00  INFO 20395 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T06:31:01.514-05:00  INFO 20410 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20410 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T06:31:01.515-05:00  INFO 20410 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T06:31:01.546-05:00  INFO 20410 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T06:31:01.546-05:00  INFO 20410 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T06:31:02.079-05:00  INFO 20410 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T06:31:02.086-05:00  INFO 20410 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T06:31:02.086-05:00  INFO 20410 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T06:31:02.233-05:00  INFO 20410 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T06:31:02.238-05:00  INFO 20410 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T06:31:02.239-05:00  INFO 20410 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 691 ms
+2022-12-09T06:31:02.446-05:00  INFO 20410 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T06:31:02.468-05:00  INFO 20410 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T06:31:02.474-05:00  INFO 20410 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.208 seconds (process running for 1.838)
+2022-12-09T06:31:04.062-05:00  INFO 20410 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T06:31:04.063-05:00  INFO 20410 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T06:31:04.064-05:00  INFO 20410 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T06:31:41.124-05:00  INFO 20410 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2022-12-09T06:31:41.132-05:00  INFO 20410 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-09T06:31:41.133-05:00  INFO 20410 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-12-09T06:31:41.189-05:00  INFO 20410 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20410 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T06:31:41.189-05:00  INFO 20410 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T06:31:41.280-05:00  INFO 20410 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T06:31:41.280-05:00  INFO 20410 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T06:31:41.280-05:00  INFO 20410 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T06:31:41.323-05:00  INFO 20410 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T06:31:41.325-05:00  INFO 20410 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T06:31:41.325-05:00  INFO 20410 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 134 ms
+2022-12-09T06:31:41.379-05:00  INFO 20410 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T06:31:41.385-05:00  INFO 20410 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T06:31:41.389-05:00  INFO 20410 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 0.215 seconds (process running for 40.752)
+2022-12-09T06:31:41.390-05:00  INFO 20410 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-12-09T06:31:43.398-05:00  INFO 20410 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T06:31:43.398-05:00  INFO 20410 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T06:31:43.399-05:00  INFO 20410 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T06:56:40.689-05:00  INFO 20557 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20557 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T06:56:40.691-05:00  INFO 20557 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T06:56:40.727-05:00  INFO 20557 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T06:56:40.727-05:00  INFO 20557 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T06:56:41.320-05:00  INFO 20557 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T06:56:41.328-05:00  INFO 20557 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T06:56:41.328-05:00  INFO 20557 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T06:56:41.476-05:00  INFO 20557 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T06:56:41.481-05:00  INFO 20557 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T06:56:41.481-05:00  INFO 20557 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 753 ms
+2022-12-09T06:56:41.722-05:00  INFO 20557 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T06:56:41.745-05:00  INFO 20557 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T06:56:41.751-05:00  INFO 20557 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.36 seconds (process running for 2.013)
+2022-12-09T06:56:44.510-05:00  INFO 20557 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T06:56:44.511-05:00  INFO 20557 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T06:56:44.512-05:00  INFO 20557 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T06:58:48.900-05:00  INFO 20580 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20580 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T06:58:48.902-05:00  INFO 20580 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T06:58:48.933-05:00  INFO 20580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T06:58:48.933-05:00  INFO 20580 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T06:58:49.562-05:00  INFO 20580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T06:58:49.570-05:00  INFO 20580 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T06:58:49.570-05:00  INFO 20580 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T06:58:49.780-05:00  INFO 20580 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T06:58:49.787-05:00  INFO 20580 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T06:58:49.788-05:00  INFO 20580 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 855 ms
+2022-12-09T06:58:50.096-05:00  INFO 20580 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T06:58:50.123-05:00  INFO 20580 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T06:58:50.130-05:00  INFO 20580 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.5 seconds (process running for 2.1)
+2022-12-09T06:58:53.188-05:00  INFO 20580 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T06:58:53.188-05:00  INFO 20580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T06:58:53.189-05:00  INFO 20580 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T06:59:33.456-05:00  INFO 20596 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20596 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T06:59:33.458-05:00  INFO 20596 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T06:59:33.494-05:00  INFO 20596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T06:59:33.494-05:00  INFO 20596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T06:59:34.029-05:00  INFO 20596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T06:59:34.036-05:00  INFO 20596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T06:59:34.036-05:00  INFO 20596 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T06:59:34.181-05:00  INFO 20596 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T06:59:34.186-05:00  INFO 20596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T06:59:34.186-05:00  INFO 20596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 691 ms
+2022-12-09T06:59:34.481-05:00  INFO 20596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T06:59:34.509-05:00  INFO 20596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T06:59:34.516-05:00  INFO 20596 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.33 seconds (process running for 1.732)
+2022-12-09T06:59:35.373-05:00  INFO 20596 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T06:59:35.373-05:00  INFO 20596 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T06:59:35.374-05:00  INFO 20596 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-12-09T07:01:54.790-05:00  INFO 20608 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20608 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T07:01:54.792-05:00  INFO 20608 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T07:01:54.826-05:00  INFO 20608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T07:01:54.826-05:00  INFO 20608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T07:01:55.446-05:00  INFO 20608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T07:01:55.453-05:00  INFO 20608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T07:01:55.453-05:00  INFO 20608 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T07:01:55.600-05:00  INFO 20608 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T07:01:55.606-05:00  INFO 20608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T07:01:55.606-05:00  INFO 20608 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 780 ms
+2022-12-09T07:01:55.816-05:00  INFO 20608 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T07:01:55.844-05:00  INFO 20608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T07:01:55.851-05:00  INFO 20608 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.334 seconds (process running for 2.002)
+2022-12-09T07:01:57.459-05:00  INFO 20608 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T07:01:57.460-05:00  INFO 20608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T07:01:57.461-05:00  INFO 20608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T07:02:27.236-05:00  INFO 20612 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Starting SpringWebappApplication using Java 19 with PID 20612 (/Users/smbp/Desktop/MySpring/spring-webapp/target/classes started by smbp in /Users/smbp/Desktop/MySpring/spring-webapp)
+2022-12-09T07:02:27.238-05:00  INFO 20612 --- [restartedMain] c.s.w.s.SpringWebappApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T07:02:27.270-05:00  INFO 20612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-09T07:02:27.270-05:00  INFO 20612 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-09T07:02:27.857-05:00  INFO 20612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T07:02:27.864-05:00  INFO 20612 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T07:02:27.864-05:00  INFO 20612 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T07:02:28.017-05:00  INFO 20612 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-12-09T07:02:28.027-05:00  INFO 20612 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T07:02:28.044-05:00  INFO 20612 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 772 ms
+2022-12-09T07:02:28.290-05:00  INFO 20612 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-09T07:02:28.315-05:00  INFO 20612 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T07:02:28.322-05:00  INFO 20612 --- [restartedMain] c.s.w.s.SpringWebappApplication          : Started SpringWebappApplication in 1.408 seconds (process running for 2.491)
+2022-12-09T07:02:33.924-05:00  INFO 20612 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T07:02:33.924-05:00  INFO 20612 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T07:02:33.925-05:00  INFO 20612 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

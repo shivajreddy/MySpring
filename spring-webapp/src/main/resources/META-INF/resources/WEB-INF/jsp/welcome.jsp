@@ -1,9 +1,14 @@
-<%--<%@ include file="common/header.jspf" %>--%>
-<%--<%@ include file="common/navigation.jspf" %>	--%>
+<html>
+<head><title>Login</title></head>
+<body><h1>Incorrect credentials</h1>
+<form method="post">
+    <label for="username">Username:</label>
+    <input name="username" id="username" type="text"/>
+    <label for="password">Password:</label>
+    <input name="password" id="password" type="password"/>
+    <button type="submit">Login</button>
+</form>
+</body>
+</html>
 
-<div class="container">
-<%--	<h1>Welcome ${name}</h1>--%>
-	<a href="list-todos">Manage</a> your todos
-</div>
 
-<%--<%@ include file="common/footer.jspf" %>--%>
