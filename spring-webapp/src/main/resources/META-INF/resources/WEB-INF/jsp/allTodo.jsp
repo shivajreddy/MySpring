@@ -11,13 +11,19 @@
 
 <h2>Welcome user : ${username} </h2>
 
+<p>List of all todos:</p>
+
 <c:forEach items="${todos}" var="todo">
     <p>
-            ${todo}
+            ${todo.getId()}
+            ${todo.getName()}
+            ${todo.getDescription()}
+            ${todo.isFinished()}
     </p>
 </c:forEach>
 <p>${loginForm}</p>
 
-My first html page with body - JSP
+
 </body>
 </html>
+

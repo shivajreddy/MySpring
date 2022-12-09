@@ -1,5 +1,5 @@
 <html>
-<head><title>Login</title></head>
+<head><title>Wrong User</title></head>
 <body><h1>Incorrect credentials</h1>
 <form method="post">
     <label for="username">Username:</label>

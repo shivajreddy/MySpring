@@ -1,33 +1,32 @@
-package com.shiva.webapp.springwebapp.login.Todo;
+package com.shiva.webapp.springwebapp.login;
 
 public class Todo {
-    private final int id;
-    private final String username;
+    private int id;
+    private String name;
     private String description;
     private boolean finished;
 
-    public Todo(int id, String username, String description, boolean finished) {
+    public Todo(int id, String name, String description, boolean finished) {
         this.id = id;
-        this.username = username;
+        this.name = name;
         this.description = description;
         this.finished = finished;
-    }
-
-    @Override
-    public String toString() {
-        return "## Todo [id= " + id +
-                ", username" + username +
-                ", description" + description +
-                ", finished: " + finished +
-                " ]";
     }
 
     public int getId() {
         return id;
     }
 
-    public String getUsername() {
-        return username;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {

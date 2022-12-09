@@ -1,55 +1,60 @@
 package com.shiva.webapp.springwebapp.login;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import java.util.List;
+
 import jakarta.servlet.http.HttpServletRequest;
 
-
 @Controller
-@SessionAttributes({"username", "loginForm"})
+@SessionAttributes({"username", "password"})
 public class LoginController {
 
-    /* using a logger */
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    TodoService todoService;
 
-    private final AuthenticationService authenticationService;
-
-    @Autowired
-    public LoginController(AuthenticationService authenticationService) {
-        this.authenticationService = authenticationService;
+    public LoginController(TodoService todoService) {
+        this.todoService = todoService;
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+
+    @RequestMapping(value = "login", method = RequestMethod.GET)
     public String loginPage() {
         return "loginPage";
     }
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
-    public String welcomePage(HttpServletRequest request, Model model) {
-        // public String welcomePage(@ModelAttribute("loginForm") LoginForm loginForm, Model model) {
+    public String loginPostMethod(HttpServletRequest request, Model model) {
 
-        LoginForm loginForm = new LoginForm();
-        loginForm.setUsername(request.getParameter("username"));
-        loginForm.setPassword(request.getParameter("password"));
+        // get form-data
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
 
-        System.out.println("##" + "loginForm: " + loginForm);
+        // Add data to session
+        model.addAttribute("username", username);
+        model.addAttribute("password", password);
 
-        if (authenticationService.authenticate(loginForm.getUsername(), loginForm.getPassword())) {
-            model.addAttribute("username", loginForm.getUsername());
-            model.addAttribute("loginForm", loginForm);
+        AuthenticateService authenticateService = new AuthenticateService(username, password);
+
+        // success
+        if (authenticateService.authenticate()) {
+            List<Todo> userTodos = todoService.getTodosByUser(username);
+            model.addAttribute("todos", userTodos);
             return "resultPage";
+            // return "allTodo";
         }
-        return "welcome";
+
+        // failed
+        return "wrongUser";
+
     }
 
+    @RequestMapping(value = "todos", method = RequestMethod.GET)
+    public String allTodo() {
+        return "allTodo";
+    }
 }
 
