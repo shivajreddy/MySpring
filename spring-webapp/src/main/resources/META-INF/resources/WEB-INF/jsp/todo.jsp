@@ -11,23 +11,26 @@
 <div class="container">
     <h1>Enter Todo Details</h1>
 
-<%--    <form:form method="post" >--%>
-<%--        Description: <form:input type="text" path="description"--%>
-<%--                                 required="required"/>--%>
-<%--        <form:input type="hidden" path="id"/>--%>
-<%--        <form:input type="hidden" path="done"/>--%>
-<%--        <input type="submit" class="btn btn-success"/>--%>
-<%--    </form:form>--%>
+    <%--@elvariable id="todo" type="com.shiva.webapp.springwebapp.todo.Todo"--%>
+
+    <form:form method="post" modelAttribute="todo">
+        Description: <form:input type="text" path="description"
+                                 required="required"/>
+        <form:input type="hidden" path="id"/>
+        <form:input type="hidden" path="done"/>
+        <input type="submit" class="btn btn-success"/>
+    </form:form>
 
 
-    <form method="post">
-        Description: <input type="text" name="description"/>
-        Username: <input type="text" name="username"/>
-        <button type="submit" class="btn btn-success">Add New Todo</button>
-    </form>
+    <%--    <form:form method="post" >--%>
+    <%--        Description: <input type="text" name="description"/>--%>
+    <%--        Username: <input type="text" name="username"/>--%>
+    <%--        <button type="submit" class="btn btn-success">Add New Todo</button>--%>
+    <%--    </form:form>--%>
 
 </div>
 <script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 <script src="webjars/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>
+

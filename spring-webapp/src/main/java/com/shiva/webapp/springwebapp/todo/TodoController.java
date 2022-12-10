@@ -4,8 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Controller
@@ -28,17 +28,20 @@ public class TodoController {
     }
 
     @GetMapping("/add-todo")
-    public String addTodoForm() {
+    public String addTodoForm(ModelMap modelMap) {
+
+        String username = (String) modelMap.get("name");
+        Todo todo = new Todo(0, username, "", LocalDate.now().plusYears(1), false);
+        modelMap.put("todo", todo);
+
         return "todo";
     }
 
     @PostMapping("/add-todo")
-    public String addNewTodo(@RequestParam String description, @RequestParam String username, ModelMap modelMap) {
+    public String addNewTodo(ModelMap modelMap, Todo todo) {
 
-        System.out.println("## got post method");
+        todoService.addTodo(todo.getUsername(), todo.getDescription(), todo.isDone());
 
-        // String username = (String) modelMap.get("name");
-        todoService.addTodo(username, description, false);
         return "redirect:all-todos";
     }
 
