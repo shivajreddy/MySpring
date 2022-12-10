@@ -14,7 +14,7 @@
             <th>id</th>
             <th>Username</th>
             <th>Description</th>
-            <th>Target Date</th>
+            <th>Target Time</th>
             <th>Is Done?</th>
             <th></th>
             <th></th>
@@ -26,7 +26,7 @@
                 <td>${todo.id}</td>
                 <td>${todo.username}</td>
                 <td>${todo.description}</td>
-                <td>${todo.targetDate}</td>
+                <td>${todo.targetTime}</td>
                 <td>${todo.done}</td>
                 <td><a type="button" class="btn btn-success"
                        href="/update-todo?id=${todo.id}">Update</a></td>

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 import jakarta.validation.Valid;
@@ -36,7 +36,7 @@ public class TodoController {
     public String addTodoForm(ModelMap modelMap) {
 
         String username = (String) modelMap.get("name");
-        Todo todo = new Todo(0, username, "default", LocalDate.now().plusYears(1), false);
+        Todo todo = new Todo(0, username, "default", LocalTime.now(), false);
         modelMap.put("todo", todo);
 
         return "todo";
@@ -63,5 +63,20 @@ public class TodoController {
         return "redirect:all-todos";
     }
 
+    @GetMapping("/update-todo")
+    public String showTodoItem(@RequestParam int id, ModelMap modelMap) {
+
+        Todo found_todo = todoService.getTodoById(id);
+
+        modelMap.put("todo", found_todo);
+        return "existingTodo";
+    }
+
+    @PostMapping("/update-todo")
+    public String updateTodoItem(ModelMap modelMap, @Valid Todo todo, BindingResult result) {
+        System.out.println("@@" + todo);
+        todoService.updateTodo(todo);
+        return "redirect:all-todos";
+    }
 }
 

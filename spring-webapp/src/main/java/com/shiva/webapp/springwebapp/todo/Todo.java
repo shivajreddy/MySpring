@@ -1,6 +1,6 @@
 package com.shiva.webapp.springwebapp.todo;
 
-import java.time.LocalDate;
+import java.time.LocalTime;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -11,14 +11,14 @@ public class Todo {
     private String username;
     @Size(min = 10, message = "Min. 10 chars")
     private String description;
-    private LocalDate targetDate;
+    private LocalTime targetTime;
     private boolean done;
 
-    public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
+    public Todo(int id, String username, String description, LocalTime targetTime, boolean done) {
         this.id = id;
         this.username = username;
         this.description = description;
-        this.targetDate = targetDate;
+        this.targetTime = targetTime;
         this.done = done;
     }
 
@@ -46,12 +46,12 @@ public class Todo {
         this.description = description;
     }
 
-    public LocalDate getTargetDate() {
-        return targetDate;
+    public LocalTime getTargetTime() {
+        return targetTime;
     }
 
-    public void setTargetDate(LocalDate targetDate) {
-        this.targetDate = targetDate;
+    public void setTargetTime(LocalTime targetTime) {
+        this.targetTime = targetTime;
     }
 
     public boolean isDone() {
@@ -65,7 +65,7 @@ public class Todo {
     @Override
     public String toString() {
         return "Todo [id=" + id + ", username=" + username + ", description=" + description + ", targetDate="
-                + targetDate + ", done=" + done + "]";
+                + targetTime + ", done=" + done + "]";
     }
 
 }
