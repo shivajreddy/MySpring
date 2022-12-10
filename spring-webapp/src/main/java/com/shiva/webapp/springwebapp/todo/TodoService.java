@@ -1,4 +1,4 @@
-package com.shiva.webapp.springwebapp.authentication.todo;
+package com.shiva.webapp.springwebapp.todo;
 
 import org.springframework.stereotype.Service;
 

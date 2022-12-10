@@ -22,6 +22,7 @@
 
     <form method="post">
         Description: <input type="text" name="description"/>
+        Username: <input type="text" name="username"/>
         <button type="submit" class="btn btn-success">Add New Todo</button>
     </form>
 

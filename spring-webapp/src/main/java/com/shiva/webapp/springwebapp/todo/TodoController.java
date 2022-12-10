@@ -1,12 +1,9 @@
-package com.shiva.webapp.springwebapp.authentication.todo;
+package com.shiva.webapp.springwebapp.todo;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -36,11 +33,11 @@ public class TodoController {
     }
 
     @PostMapping("/add-todo")
-    public String addNewTodo(@RequestParam String description, ModelMap modelMap) {
+    public String addNewTodo(@RequestParam String description, @RequestParam String username, ModelMap modelMap) {
 
         System.out.println("## got post method");
 
-        String username = (String) modelMap.get("name");
+        // String username = (String) modelMap.get("name");
         todoService.addTodo(username, description, false);
         return "redirect:all-todos";
     }
