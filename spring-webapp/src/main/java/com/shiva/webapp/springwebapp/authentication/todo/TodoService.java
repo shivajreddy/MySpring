@@ -6,13 +6,12 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Service
 public class TodoService {
 
-    private static List<Todo> todos = new ArrayList<>();
+    public static List<Todo> todos = new ArrayList<>();
+    public static int todosCount;
 
-    private static int todosCount = 0;
 
     static {
         todos.add(new Todo(++todosCount, "in28minutes", "Learn AWS",
@@ -23,12 +22,15 @@ public class TodoService {
                 LocalDate.now().plusYears(3), false));
     }
 
-    public List<Todo> findByUsername(String username) {
+
+    public List<Todo> getTodos() {
         return todos;
     }
 
-    public void addTodo(String username, String description, LocalDate targetDate, boolean done) {
-        Todo todo = new Todo(++todosCount, username, description, targetDate, done);
-        todos.add(todo);
+    // todoService.addTodo(username, description,
+    // LocalDate.now().plusYears(1), false);
+    public void addTodo(String username, String description,boolean done) {
+        todos.add(new Todo(++todosCount, username, description, LocalDate.now().plusYears(1), false));
     }
+
 }
