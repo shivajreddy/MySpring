@@ -10,6 +10,7 @@
 <body>
 <div class="container">
     <h1>Enter Todo Details</h1>
+
 <%--    <form:form method="post" >--%>
 <%--        Description: <form:input type="text" path="description"--%>
 <%--                                 required="required"/>--%>
@@ -21,8 +22,7 @@
 
     <form method="post">
         Description: <input type="text" name="description"/>
-        <input type="submit" class="btn btn-success"/>
-
+        <button type="submit" class="btn btn-success">Add New Todo</button>
     </form>
 
 </div>

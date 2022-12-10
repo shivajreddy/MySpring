@@ -27,8 +27,6 @@ public class TodoService {
         return todos;
     }
 
-    // todoService.addTodo(username, description,
-    // LocalDate.now().plusYears(1), false);
     public void addTodo(String username, String description,boolean done) {
         todos.add(new Todo(++todosCount, username, description, LocalDate.now().plusYears(1), false));
     }
