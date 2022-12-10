@@ -2,9 +2,14 @@ package com.shiva.webapp.springwebapp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class Todo {
     private int id;
+    @NotBlank(message = "must not be blank")
     private String username;
+    @Size(min = 10, message = "Min. 10 chars")
     private String description;
     private LocalDate targetDate;
     private boolean done;

@@ -14,19 +14,16 @@
     <%--@elvariable id="todo" type="com.shiva.webapp.springwebapp.todo.Todo"--%>
 
     <form:form method="post" modelAttribute="todo">
-        Description: <form:input type="text" path="description"
-                                 required="required"/>
+        Description:
+        <form:input type="text" path="description" required="required"/>
+        <form:errors cssClass="text-danger" path="description"/>
+        <form:errors cssClass="text-danger" path="username"/>
+        <form:input type="text" path="username"/>
         <form:input type="hidden" path="id"/>
         <form:input type="hidden" path="done"/>
         <input type="submit" class="btn btn-success"/>
     </form:form>
 
-
-    <%--    <form:form method="post" >--%>
-    <%--        Description: <input type="text" name="description"/>--%>
-    <%--        Username: <input type="text" name="username"/>--%>
-    <%--        <button type="submit" class="btn btn-success">Add New Todo</button>--%>
-    <%--    </form:form>--%>
 
 </div>
 <script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>

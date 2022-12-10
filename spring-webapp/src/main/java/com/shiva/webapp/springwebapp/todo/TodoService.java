@@ -27,8 +27,17 @@ public class TodoService {
         return todos;
     }
 
-    public void addTodo(String username, String description,boolean done) {
+    public void addTodo(String username, String description, boolean done) {
         todos.add(new Todo(++todosCount, username, description, LocalDate.now().plusYears(1), false));
+    }
+
+    public void deleteTodo(int deleteId) {
+        for (int idx = 0; idx < todos.size(); ++idx) {
+            if (todos.get(idx).getId() == deleteId) {
+                todos.remove(idx);
+                break;
+            }
+        }
     }
 
 }
