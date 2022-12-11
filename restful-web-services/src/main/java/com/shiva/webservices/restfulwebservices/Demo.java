@@ -28,19 +28,45 @@ public class Demo {
         // i2.singleAbstractMethod(10);
 
 
-        IFunc i1 = new Test();
-        System.out.println(i1.square(10));
-        System.out.println(i1.square(20));
+        // IFunc i1 = new Test();
+        // System.out.println(i1.square(10));
+        // System.out.println(i1.square(20));
+        //
+        // IFunc i = n -> n * n;
+        // IFunc i2 = (n) -> n * n;
+        // IFunc i3 = n -> {
+        //     return n * n;
+        // };
+        // IFunc i4 = n -> {
+        //     return n * n;
+        // };
 
-        IFunc i = n -> n * n;
-        IFunc i2 = (n) -> n * n;
-        IFunc i3 = n -> {
-            return n * n;
+        // System.out.println(i.square(7));
+        // System.out.println(i.square(8));
+
+        Runnable r = () -> {
+            for (int idx = 0; idx < 10; idx++) {
+                System.out.println("child thread" + idx);
+            }
         };
-        IFunc i4 = n -> {return n * n;};
-        System.out.println(i.square(7));
-        System.out.println(i.square(8));
 
+        // main thread job
+        for (int idx = 0; idx < 10; idx++) {
+            System.out.println("main thread" + idx);
+        }
+        // r.run();
+
+        Runnable job = new Runnable() {
+            @Override
+            public void run() {
+                for (int idx = 0; idx < 10; idx++) {
+                    System.out.println("child thread" + idx);
+                }
+            }
+        };
+
+        Thread childThread = new Thread(job);
+        // childThread.start();
     }
 
 }
