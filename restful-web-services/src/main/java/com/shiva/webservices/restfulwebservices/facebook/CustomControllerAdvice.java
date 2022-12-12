@@ -52,7 +52,5 @@ public class CustomControllerAdvice extends ResponseEntityExceptionHandler {
 
         return new ResponseEntity<>(errorDetail, HttpStatus.BAD_REQUEST);
     }
+
 }
-
-
-
