@@ -2,6 +2,7 @@ package com.shiva.webservices.restfulwebservices.facebook;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,6 +41,10 @@ public class UserResource {
 
     @PostMapping("/users")
     public ResponseEntity<User> createNewUser(@Valid @RequestBody NewUserSchema newUserSchema) {
+    // public ResponseEntity<User> createNewUser(@Valid @RequestBody NewUserSchema newUserSchema, BindingResult result) {
+        // if (result.hasErrors()){
+        //     throw new WrongUserSchemaError("wrong schema");
+        // }
         User createdUser = userDaoService.createUser(newUserSchema);
         return new ResponseEntity<User>(createdUser, HttpStatus.CREATED);
     }

@@ -7,10 +7,11 @@ import jakarta.validation.constraints.Size;
 
 public class NewUserSchema {
 
-    @NotBlank
-    @Size(min = 4)
+    @NotBlank(message = "username can't be blank")
+    @Size(min = 4, max = 10, message = "username size should be b/w 4 and 10 chars")
     private String username;
     @NotBlank
+    @Size(min = 4, max = 10, message = "firstName size should be b/w 4 and 10 chars")
     private String firstName;
     private String email;
 
