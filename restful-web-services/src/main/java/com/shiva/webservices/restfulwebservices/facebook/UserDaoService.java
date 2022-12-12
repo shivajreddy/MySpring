@@ -25,10 +25,15 @@ public class UserDaoService {
     }
 
     public User getUserWithId(int id) {
-        Predicate<User> getUserWithId = user -> Objects.equals(user.getId(), id);
 
-        // User user = allUsers.stream().filter(getUserWithId).findFirst().get();
-        // return user;
+
+        /** using predicate method
+         *
+         Predicate<? super User> getUserWithId = user -> Objects.equals(user.getId(), id);
+         User user = allUsers.stream().filter(getUserWithId).findFirst().orElse(null);
+         return user;
+
+         */
 
         for (User user : allUsers) {
             if (user.getId() == id) {
@@ -39,11 +44,32 @@ public class UserDaoService {
         return null;
     }
 
-    public User createUser(User userData) {
+    public User createUser(NewUserSchema userData) {
         User createdUser = new User(userCount + 1, userData.getUsername(), userData.getFirstName(), userData.getEmail());
         allUsers.add(createdUser);
         userCount++;
         return createdUser;
     }
 
+    // service to delete the user
+    public User deleteUserWithId(int id) {
+
+
+        /** using predicate method
+         *
+         Predicate<? super User> predicate = user -> user.getId() == id;
+         allUsers.removeIf(predicate);
+         */
+
+        for (int idx = 0; idx < allUsers.size(); idx++) {
+            User user = allUsers.get(idx);
+            if (user.getId() == id) {
+                allUsers.remove(idx);
+                return user;
+            }
+        }
+        return null;
+    }
+
 }
+
