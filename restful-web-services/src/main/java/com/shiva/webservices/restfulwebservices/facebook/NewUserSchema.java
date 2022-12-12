@@ -1,6 +1,5 @@
 package com.shiva.webservices.restfulwebservices.facebook;
 
-import org.springframework.validation.annotation.Validated;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -45,3 +44,4 @@ public class NewUserSchema {
         this.email = email;
     }
 }
+
