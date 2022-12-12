@@ -1,86 +1,37 @@
 package com.shiva.webservices.restfulwebservices;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+
 public class Demo {
     public static void main(String[] args) {
 
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(20);
+        arr.add(10);
+        arr.add(25);
+        arr.add(5);
 
-        /**
-         *
-         // a simple lambda expression
-         () -> System.out.println("hi");
+        List<Integer> arr2 = arr;
 
-         // arguemnts in lambda expression
-         (int a, int b) -> System.out.println(a + b);
+        // List<Integer> arr = Arrays.asList(10, 20, 30, 21, 1, 2, 3);
 
-         // no need types always
-         (a, b) -> System.out.println(a + b);
+        Predicate<Integer> findGreaterThan10 = n -> n > 10;
 
-         // takes an int, returns the square of that
-         a -> a * a;
-         *
-         */
+        List<Integer> result = arr.stream().filter(findGreaterThan10).toList();
 
+        System.out.println(result);
+        System.out.println(result.getClass().getName());
 
-        // IFunc i = () -> System.out.println("woawww");
-        // i.singleAbstractMethod();
-
-        // IFunc i2 = n -> n;
-        // i2.singleAbstractMethod(10);
-
-
-        // IFunc i1 = new Test();
-        // System.out.println(i1.square(10));
-        // System.out.println(i1.square(20));
-        //
-        // IFunc i = n -> n * n;
-        // IFunc i2 = (n) -> n * n;
-        // IFunc i3 = n -> {
-        //     return n * n;
-        // };
-        // IFunc i4 = n -> {
-        //     return n * n;
-        // };
-
-        // System.out.println(i.square(7));
-        // System.out.println(i.square(8));
-
-        Runnable r = () -> {
-            for (int idx = 0; idx < 10; idx++) {
-                System.out.println("child thread" + idx);
-            }
-        };
-
-        // main thread job
-        for (int idx = 0; idx < 10; idx++) {
-            System.out.println("main thread" + idx);
-        }
-        // r.run();
-
-        Runnable job = new Runnable() {
-            @Override
-            public void run() {
-                for (int idx = 0; idx < 10; idx++) {
-                    System.out.println("child thread" + idx);
-                }
-            }
-        };
-
-        Thread childThread = new Thread(job);
-        // childThread.start();
     }
 
-}
-
-
-class Test implements IFunc {
-    @Override
-    public int square(int a) {
-        return a * a;
-    }
 }
 
 
 @FunctionalInterface
-interface IFunc {
+interface LambdaInterface {
     int square(int a);
 }

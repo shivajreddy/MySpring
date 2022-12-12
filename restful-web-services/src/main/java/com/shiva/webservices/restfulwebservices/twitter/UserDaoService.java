@@ -31,9 +31,8 @@ public class UserDaoService {
 
     public User getUserById(int userId) {
 
-        Predicate<? super User> predicate = user -> user.getId() == id;
-
-        // return allUsers.stream().filter(predicate).findFirst().get(userId);
+        // Predicate<User> predicate = user -> user.getId().equals(id);
+        // return allUsers.stream().filter(predicate).findFirst().get();
 
         for (User user : allUsers) {
             if (user.getId() == userId) {

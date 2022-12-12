@@ -1,5 +1,6 @@
 package com.shiva.webservices.restfulwebservices.twitter;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,7 +29,11 @@ public class UserResource {
 
     @GetMapping("/users/{userId}")
     public User getUserById(@PathVariable int userId) {
-        return userService.getUserById(userId);
+        User user = userService.getUserById(userId);
+        if (user == null) {
+            throw new UserNotFoundException("Id: " + userId);
+        }
+        return user;
     }
 
     /**
@@ -40,14 +45,18 @@ public class UserResource {
 
         User newUser = userService.createNewUser(user);
 
-        // create a URI location
+
+        // // create a URI location
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("/{id}")
+                .path("/{userId}")
                 .buildAndExpand(newUser.getId())
                 .toUri();
 
+        System.out.println("@@" + location);
 
         return ResponseEntity.created(location).build();
+
+        // return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
 
 }
