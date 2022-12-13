@@ -57,6 +57,3 @@ class SomeBusinessImplTest {
         assertEquals(size + 1, arr.size());
     }
 }
-
-
-
