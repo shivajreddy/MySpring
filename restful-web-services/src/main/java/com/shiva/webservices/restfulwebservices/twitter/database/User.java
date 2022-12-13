@@ -13,7 +13,7 @@ public class User {
 
     // Fields
     @Id
-    private int userId;
+    private long userId;
 
     @Column(name = "user_username")
     private String userName;
@@ -24,7 +24,7 @@ public class User {
     @Column(name = "user_lastname")
     private String lastName;
 
-    public User(int userId, String userName, String firstName, String lastName) {
+    public User(long userId, String userName, String firstName, String lastName) {
         this.userId = userId;
         this.userName = userName;
         this.firstName = firstName;
@@ -35,11 +35,11 @@ public class User {
 
     }
 
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 
