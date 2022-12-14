@@ -3,6 +3,8 @@ package com.shiva.webservices.restfulwebservices.twitter.database;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 /**
@@ -13,6 +15,7 @@ public class User {
 
     // Fields
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long userId;
 
     @Column(name = "user_username")
@@ -24,15 +27,14 @@ public class User {
     @Column(name = "user_lastname")
     private String lastName;
 
+    public User() {
+    }
+
     public User(long userId, String userName, String firstName, String lastName) {
         this.userId = userId;
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
-    }
-
-    public User() {
-
     }
 
     public long getUserId() {

@@ -1,14 +1,11 @@
 package com.shiva.webservices.restfulwebservices.twitter;
 
-
 import com.shiva.webservices.restfulwebservices.twitter.database.User;
 import com.shiva.webservices.restfulwebservices.twitter.database.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
-import jakarta.servlet.ServletOutputStream;
 
 
 @Component
@@ -37,7 +34,7 @@ public class MyCommandLineRunner implements CommandLineRunner {
 
 
         // find by id
-        System.out.println(userRepository.findByUserId(5));
+        // System.out.println("@@" + userRepository.findByUserId(5));
 
     }
 
