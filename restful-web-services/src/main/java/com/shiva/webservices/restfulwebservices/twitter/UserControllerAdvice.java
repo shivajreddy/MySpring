@@ -1,5 +1,6 @@
 package com.shiva.webservices.restfulwebservices.twitter;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -23,10 +24,17 @@ public class UserControllerAdvice extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(customError, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<CustomError> handleUserNotFoundException(Exception exception, WebRequest request) {
+        System.out.println("## reached the handleMethodArgumentNotValid");
+        CustomError customError = new CustomError(exception.getMessage(), request.getDescription(true), LocalTime.now());
+        return new ResponseEntity<>(customError, HttpStatus.NOT_FOUND);
+    }
+
     // # Exception for wrong user info submitted in POST request
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException exception, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
-        // return super.handleMethodArgumentNotValid(ex, headers, status, request);
+        System.out.println("## reached the handleMethodArgumentNotValid");
 
         StringBuilder errorMessage = new StringBuilder("Total errors:" + exception.getErrorCount());
         int i = 0;

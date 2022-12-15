@@ -9,6 +9,7 @@ import com.shiva.webservices.restfulwebservices.twitter.database.User;
 import com.shiva.webservices.restfulwebservices.twitter.database.schema.NewUserSchema;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -49,14 +50,8 @@ public class UserController {
         return new ResponseEntity<>(user, HttpStatus.ACCEPTED);
     }
 
-    @Validated
     @PostMapping("/users")
-    public ResponseEntity<User> createNewTwitterUser(@Valid @RequestBody NewUserSchema userData, BindingResult bindingResult) {
-        System.out.println("@@ here" + bindingResult);
-        if (bindingResult.hasErrors()) {
-            throw new WrongUserDataException("");
-            // throw new MethodArgumentNotValidException(WrongUserDataException(), )
-        }
+    public ResponseEntity<User> createNewTwitterUser(@Valid @RequestBody NewUserSchema userData) {
         System.out.println("@@ Not supposed to come here");
         User newUser = userService.addNewUser(userData);
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
