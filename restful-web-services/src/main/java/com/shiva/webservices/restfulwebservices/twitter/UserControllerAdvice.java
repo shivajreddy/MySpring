@@ -1,10 +1,10 @@
 package com.shiva.webservices.restfulwebservices.twitter;
 
-import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -47,6 +47,12 @@ public class UserControllerAdvice extends ResponseEntityExceptionHandler {
         CustomError customError = new CustomError(errorMessage.toString(), request.getDescription(true), LocalTime.now());
 
         return new ResponseEntity<>(customError, HttpStatus.BAD_REQUEST);
+    }
 
+    // handle if there is no request body, but it must be present
+    @Override
+    protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
+        CustomError customError = new CustomError(ex.getMessage(), request.getDescription(false), LocalTime.now());
+        return new ResponseEntity<>(customError, HttpStatus.BAD_REQUEST);
     }
 }

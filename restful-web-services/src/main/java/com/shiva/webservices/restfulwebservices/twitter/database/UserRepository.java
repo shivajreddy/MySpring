@@ -16,8 +16,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     List<User> findAll();
 
-    // User findByUserId(long id);
-
     List<User> findByUserId(long userId);
 
     AtomicLong counter = new AtomicLong(7);
@@ -25,7 +23,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     User save(User user);
 
     long count();
-
 
 }
 

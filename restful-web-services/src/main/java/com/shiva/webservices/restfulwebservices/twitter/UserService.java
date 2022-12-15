@@ -8,6 +8,7 @@ package com.shiva.webservices.restfulwebservices.twitter;
 import com.shiva.webservices.restfulwebservices.twitter.database.User;
 import com.shiva.webservices.restfulwebservices.twitter.database.UserRepository;
 import com.shiva.webservices.restfulwebservices.twitter.database.schema.NewUserSchema;
+import com.shiva.webservices.restfulwebservices.twitter.database.schema.UpdateUserSchema;
 
 import org.springframework.stereotype.Service;
 
@@ -42,6 +43,24 @@ public class UserService {
         userRepository.save(newUser);
         return newUser;
 
+    }
+
+    public User updateUser(int id, UpdateUserSchema newUserData) {
+        User user = this.queryUserById(id);
+        if (newUserData.getUserName() != null) {
+            user.setUserName(newUserData.getUserName());
+        }
+        if (newUserData.getFirstName() != null) {
+            user.setFirstName(newUserData.getFirstName());
+        }
+        if (newUserData.getLastName() != null) {
+            user.setLastName(newUserData.getLastName());
+        }
+
+        // Save the updated user to DB
+        userRepository.save(user);
+
+        return user;
     }
 
 }
