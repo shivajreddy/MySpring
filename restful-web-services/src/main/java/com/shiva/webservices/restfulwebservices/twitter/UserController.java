@@ -50,6 +50,12 @@ public class UserController {
         return new ResponseEntity<>(user, HttpStatus.ACCEPTED);
     }
 
+    /**
+     * Since we will use `handleMethodArgumentNotValid` to handle the errors if not@Valid,
+     * we shouldn't use (BindingResult) as the argument here.
+     * And since we won't be using BindingResult,we don't check for bindingResult.hasErrors() to throw an error
+     * we are just using the `handleMethodArgumentNotValid` to handle validations in our arguments
+     */
     @PostMapping("/users")
     public ResponseEntity<User> createNewTwitterUser(@Valid @RequestBody NewUserSchema userData) {
         System.out.println("@@ Not supposed to come here");
