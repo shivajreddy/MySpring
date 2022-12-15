@@ -31,6 +31,11 @@ public class UserService {
         return allUsers;
     }
 
+    // query for a user, of a particular user-id
+    public User queryUserById(int id) {
+        return userRepository.findByUserId(id).stream().findFirst().orElse(null);
+    }
+
     public User addNewUser(NewUserSchema userData) {
 
         User newUser = new User(userRepository.count() + 1, userData.getUserName(), userData.getFirstName(), userData.getLastName());
