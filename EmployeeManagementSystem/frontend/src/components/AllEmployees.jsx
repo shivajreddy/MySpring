@@ -1,27 +1,26 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import EmployeeService from '../services/EmployeeService';
 
-class ListEmployeeComponent extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      employees: [],
-    };
-  }
+function AllEmployees () {
   
-  componentDidMount () {
+  const [allEmployees, setAllEmployees] = React.useState([]);
+  
+  useEffect(() => {
     EmployeeService.getEmployees().then((res) => {
-      this.setState({ employees: res.data });
+      setAllEmployees(res.data);
     });
-  }
+  }, []);
   
-  render () {
-    return (
+  console.log('all employees = ', allEmployees);
+  
+  return (
+    <div>
+      <h2>All employees</h2>
       <div>
         <h2 className="text-center">Employees list</h2>
         <div className="row">
           <table className="table table-striped table-bordered">
-            
+        
             <thead>
             <tr>
               <th>Employee First Name</th>
@@ -32,7 +31,7 @@ class ListEmployeeComponent extends Component {
             </thead>
             <tbody>
             {
-              this.state.employees.map(
+              allEmployees.map(
                 employee =>
                   <tr key={employee.id}>
                     <td>{employee.firstName}</td>
@@ -44,10 +43,11 @@ class ListEmployeeComponent extends Component {
             </tbody>
           </table>
         </div>
-      
+  
       </div>
-    );
-  }
+    </div>
+  );
+  
 }
 
-export default ListEmployeeComponent;
+export default AllEmployees;

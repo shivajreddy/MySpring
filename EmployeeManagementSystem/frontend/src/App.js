@@ -1,10 +1,10 @@
 import './App.css'
-import ListEmployeeComponent from './components/ListEmployeeComponent'
+import AllEmployees from './components/AllEmployees';
 
 function App () {
   return (
     <div className="container">
-      <ListEmployeeComponent/>
+      <AllEmployees/>
     </div>
   )
 }
