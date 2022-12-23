@@ -35,5 +35,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
         return repository.save(employee);
     }
 
+    public String removeAllEmployee() {
+        repository.deleteAll();
+        return "all rows deleted";
+    }
 
 }
