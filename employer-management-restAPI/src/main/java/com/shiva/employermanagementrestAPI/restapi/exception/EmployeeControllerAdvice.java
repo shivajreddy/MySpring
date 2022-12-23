@@ -35,11 +35,6 @@ public class EmployeeControllerAdvice extends ResponseEntityExceptionHandler {
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
 
-        System.out.println("@@ MethodArgumentNotValidException handler");
-        System.out.println("@@" + request.getDescription(true));
-        // System.out.println("@@" + request.);
-
-
         // make a clean message
         StringBuilder finalErrorMessage = new StringBuilder();
         int totalErrors = ex.getErrorCount();

@@ -5,9 +5,9 @@ import java.time.LocalTime;
 public class ErrorDetails {
 
     // fields
-    private final String message;
-    private final LocalTime timeStamp;
-    private final String description;
+    private String message;
+    private LocalTime timeStamp;
+    private String description;
 
     // constructor
 
@@ -22,11 +22,23 @@ public class ErrorDetails {
         return message;
     }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
     public LocalTime getTimeStamp() {
         return timeStamp;
     }
 
+    public void setTimeStamp(LocalTime timeStamp) {
+        this.timeStamp = timeStamp;
+    }
+
     public String getDescription() {
         return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

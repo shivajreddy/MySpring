@@ -32,7 +32,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public Employee saveEmployee(Employee employee) {
-        return employee;
+        return repository.save(employee);
     }
 
 
