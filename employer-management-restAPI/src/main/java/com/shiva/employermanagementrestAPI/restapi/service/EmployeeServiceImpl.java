@@ -11,7 +11,7 @@ import com.shiva.employermanagementrestAPI.restapi.repository.EmployeeRepository
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService {
+public class EmployeeServiceImpl implements IEmployeeService {
 
     // inject repository dependency
     private final EmployeeRepository repository;

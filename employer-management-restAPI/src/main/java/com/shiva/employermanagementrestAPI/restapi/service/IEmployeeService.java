@@ -10,7 +10,7 @@ import com.shiva.employermanagementrestAPI.restapi.model.Employee;
 import java.util.List;
 import java.util.Optional;
 
-public interface EmployeeService {
+public interface IEmployeeService {
 
     public List<Employee> getAllEmployees();
 

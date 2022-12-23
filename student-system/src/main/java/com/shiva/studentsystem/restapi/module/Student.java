@@ -1,8 +1,4 @@
-/* Entity that represents the Employee table in DB
- *
- */
-
-package com.shiva.employermanagementrestAPI.restapi.model;
+package com.shiva.studentsystem.restapi.module;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,24 +8,24 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-public class Employee {
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NotBlank(message = "firstName can't be blank")
-    @Column(name = "firstName")
+    @Column(name = "first_name")
     private String firstName;
 
     @NotBlank(message = "lastName can't be blank")
-    @Column(name = "lastName")
+    @Column(name = "last_name")
     private String lastName;
 
-    public Employee() {
+    public Student() {
     }
 
-    public Employee(Long id, String firstName, String lastName) {
+    public Student(Long id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -59,4 +55,3 @@ public class Employee {
         this.lastName = lastName;
     }
 }
-
