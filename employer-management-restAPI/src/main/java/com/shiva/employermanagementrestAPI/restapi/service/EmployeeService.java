@@ -16,4 +16,6 @@ public interface EmployeeService {
 
     public Optional<Employee> getEmployeeById(Long id);
 
+    public Employee saveEmployee(Employee employee);
+
 }

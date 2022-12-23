@@ -9,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class Employee {
@@ -17,9 +18,11 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "firstName can't be blank")
     @Column(name = "firstName")
     private String firstName;
 
+    @NotBlank(message = "lastName can't be blank")
     @Column(name = "lastName")
     private String lastName;
 
