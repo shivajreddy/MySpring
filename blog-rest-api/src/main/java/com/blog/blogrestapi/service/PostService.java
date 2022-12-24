@@ -28,4 +28,8 @@ public class PostService {
         return repository.findById(id);
     }
 
+    public Post createNewPost(Post newPostData) {
+        return repository.save(newPostData);
+    }
+
 }
