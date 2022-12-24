@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import EmployeeService from '../services/EmployeeService';
 import NewEmployee from './NewEmployee';
 import { Link, useNavigate } from 'react-router-dom';
+import nav from './Nav';
 
 function AllEmployees (props) {
   
@@ -13,7 +14,7 @@ function AllEmployees (props) {
     EmployeeService.getEmployees().then((res) => {
       setAllEmployees(res.data);
     });
-  }, []);
+  }, [allEmployees]);
   
   
   function deleteAllRows (event) {
@@ -24,7 +25,10 @@ function AllEmployees (props) {
     });
   }
   
-  function removeEmployee (event) {
+  function removeEmployee (id) {
+    console.log("runnign removeEmployee for", id);
+    EmployeeService.deleteEmployeeById(id);
+    // navigate('/');
   }
   
   return (
@@ -57,9 +61,9 @@ function AllEmployees (props) {
                     <td>
                       <button
                         onClick={() => navigate(
-                          `/update/${employee.id}`, { id: employee.id })}>update
+                          `/update/${employee.id}`)}>update
                       </button>
-                      <button onClick={removeEmployee}>remove</button>
+                      <button onClick={()=>removeEmployee(employee.id)}>remove</button>
                     </td>
                   </tr>,
               )

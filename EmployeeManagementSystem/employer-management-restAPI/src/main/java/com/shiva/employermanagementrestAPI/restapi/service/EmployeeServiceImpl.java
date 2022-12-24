@@ -40,4 +40,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
         return "all rows deleted";
     }
 
+    public void removeEmployeeById(long id){
+        repository.deleteById(id);
+    }
+
 }

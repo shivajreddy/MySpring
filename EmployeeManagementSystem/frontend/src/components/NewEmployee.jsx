@@ -10,7 +10,6 @@ function NewEmployee (props) {
     event.preventDefault();
     const fname = event.target[0].value;
     const lname = event.target[1].value;
-    // console.log(`first-name: ${fname}  last-name: ${lname}`);
     EmployeeService.createNewEmployee(fname, lname);
     navigate('/');
   }

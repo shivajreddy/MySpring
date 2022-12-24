@@ -14,6 +14,13 @@ class EmployeeService {
     });
   }
   
+  deleteEmployeeById(id){
+    return axios({
+      method : 'delete',
+      url : BASE_URL + `/${id}`
+    })
+  }
+  
   deleteAllEmployees () {
     return axios({
       method: 'delete',

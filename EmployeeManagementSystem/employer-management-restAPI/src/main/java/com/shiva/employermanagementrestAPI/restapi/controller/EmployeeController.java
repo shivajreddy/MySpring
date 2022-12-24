@@ -61,6 +61,16 @@ public class EmployeeController {
         return new ResponseEntity<>(employee, HttpStatus.OK);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Employee> deleteEmployeeById(@PathVariable long id){
+        Optional<Employee> foundEmployee = service.getEmployeeById(id);
+        if (foundEmployee.isEmpty()) {
+            throw new EmployeeNotFound(id);
+        }
+        service.removeEmployeeById(id);
+        return new ResponseEntity<>(foundEmployee.get(), HttpStatus.OK);
+    }
+
     @DeleteMapping("/all")
     public String deleteAllEmployee() {
         return service.removeAllEmployee();
