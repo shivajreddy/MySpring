@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import EmployeeService from '../services/EmployeeService';
 import NewEmployee from './NewEmployee';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-function AllEmployees () {
+function AllEmployees (props) {
+  
+  const navigate = useNavigate();
   
   const [allEmployees, setAllEmployees] = React.useState([]);
   
@@ -13,23 +15,13 @@ function AllEmployees () {
     });
   }, []);
   
-  // console.log('all employees = ', allEmployees);
   
   function deleteAllRows (event) {
     EmployeeService.deleteAllEmployees().then((res) => {
-      // console.log('this is the deleteAllRows result', res);
       if (res.status === 200) {
         setAllEmployees([]);
       }
     });
-  }
-  
-  function updateEmployee (event) {
-    console.log('here are the user details');
-    console.log(event.target);
-    const element = event.target;
-    // EmployeeService.updateEmployee();
-    
   }
   
   function removeEmployee (event) {
@@ -63,7 +55,10 @@ function AllEmployees () {
                     <td>{employee.lastName}</td>
                     <td>{employee.email}</td>
                     <td>
-                      <button onClick={updateEmployee}>update</button>
+                      <button
+                        onClick={() => navigate(
+                          `/update/${employee.id}`, { id: employee.id })}>update
+                      </button>
                       <button onClick={removeEmployee}>remove</button>
                     </td>
                   </tr>,

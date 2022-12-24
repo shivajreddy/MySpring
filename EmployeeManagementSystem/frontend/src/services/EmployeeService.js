@@ -7,6 +7,13 @@ class EmployeeService {
     return axios.get(BASE_URL + '/all');
   }
   
+  getEmployeeById (id) {
+    return axios({
+      method: 'get',
+      url: BASE_URL + '/' + id,
+    });
+  }
+  
   deleteAllEmployees () {
     return axios({
       method: 'delete',
@@ -16,10 +23,10 @@ class EmployeeService {
   
   updateEmployee (id, firstName, lastName) {
     return axios({
-      method: 'patch',
+      method: 'put',
       url: BASE_URL + '/' + id,
       headers: {},
-      data: { firstName: firstName, lastName: lastName },
+      data: { id:id, firstName: firstName, lastName: lastName },
     });
   }
   
