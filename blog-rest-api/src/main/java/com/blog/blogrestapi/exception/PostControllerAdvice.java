@@ -17,4 +17,12 @@ public class PostControllerAdvice extends ResponseEntityExceptionHandler {
         CustomError error = new CustomError(exception.getMessage(), request.getDescription(false), LocalTime.now());
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
+
+    // handle duplicate title exception
+    @ExceptionHandler(DuplicateTitleException.class)
+    public ResponseEntity<CustomError> handleDuplicateTitleException(Exception exception, WebRequest request) {
+        CustomError error = new CustomError(exception.getMessage(), request.getDescription(false), LocalTime.now());
+        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+    }
+
 }
