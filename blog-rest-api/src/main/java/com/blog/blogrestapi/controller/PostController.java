@@ -1,9 +1,9 @@
 package com.blog.blogrestapi.controller;
 
+import com.blog.blogrestapi.dto.PostDto;
 import com.blog.blogrestapi.exception.DuplicateTitleException;
-import com.blog.blogrestapi.exception.PostNotFoundException;
 import com.blog.blogrestapi.model.Post;
-import com.blog.blogrestapi.service.PostService;
+import com.blog.blogrestapi.service.PostServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,70 +19,71 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
 public class PostController {
 
-    private final PostService service;
+    private final PostServiceImpl service;
 
     @Autowired
-    public PostController(PostService service) {
+    public PostController(PostServiceImpl service) {
         this.service = service;
     }
 
+    // Reading with pagination
     @GetMapping("/posts")
-    public ResponseEntity<List<Post>> getAllPosts() {
-        List<Post> allPosts = service.getAllPosts();
+    public ResponseEntity<List<PostDto>> getAll(
+            @RequestParam(value = "pageNo", defaultValue = "0", required = false) int pageNo,
+            @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize
+    ) {
+        List<PostDto> allPosts = service.getAllPosts(pageNo, pageSize);
         return new ResponseEntity<>(allPosts, HttpStatus.OK);
     }
 
+
     @GetMapping("/posts/{id}")
-    public ResponseEntity<Post> getPostById(@PathVariable Long id) {
-        Optional<Post> response = service.getPostById(id);
-        if (response.isEmpty()) {
-            throw new PostNotFoundException(id);
-        }
-        Post post = response.get();
+    public ResponseEntity<PostDto> getPostById(@PathVariable Long id) {
+        PostDto post = service.getPostById(id);
+        return new ResponseEntity<>(post, HttpStatus.OK);
+    }
+
+    @GetMapping("/posts/title")
+    public ResponseEntity<PostDto> getPostByTitle(
+            @RequestParam(value = "title", required = true) String title
+    ) {
+        PostDto post = service.getPostByTitle(title);
         return new ResponseEntity<>(post, HttpStatus.OK);
     }
 
     @PostMapping("/new")
-    public ResponseEntity<Post> createNewPost(@RequestBody Post newPostData) {
+    public ResponseEntity<PostDto> createNewPost(@RequestBody PostDto newPostData) {
         // search for duplicate post
-        Optional<Post> postWithSameTitle = service.getPostByTitle(newPostData.getTitle());
-        if (postWithSameTitle.isPresent()) {
+        PostDto postWithSameTitle = service.getPostByTitle(newPostData.getTitle());
+        if (postWithSameTitle != null) {
             throw new DuplicateTitleException(newPostData.getTitle());
         }
 
-        Post createdPost = service.createNewPost(newPostData);
+        PostDto createdPost = service.createNewPost(newPostData);
         return new ResponseEntity<>(createdPost, HttpStatus.CREATED);
     }
 
     @PutMapping("/posts/{id}")
-    public ResponseEntity<Post> updatePostById(@PathVariable Long id, @RequestBody Post postData) {
-        Optional<Post> response = service.getPostById(id);
-        if (response.isEmpty()) {
-            throw new PostNotFoundException(id);
-        }
+    public ResponseEntity<PostDto> updatePostById(@PathVariable Long id, @RequestBody Post postData) {
 
-        Post post = response.get();
+        PostDto post = service.getPostById(id);
         post.setTitle(postData.getTitle());
         post.setContent(postData.getContent());
         post.setDescription(postData.getDescription());
 
-        Post updatedPost = service.updateExistingPost(post);
+        PostDto updatedPost = service.updateExistingPost(post, id);
         return new ResponseEntity<>(updatedPost, HttpStatus.OK);
     }
 
+
     @DeleteMapping("/posts/{id}")
     public ResponseEntity<String> deletePostById(@PathVariable Long id) {
-        Optional<Post> response = service.getPostById(id);
-        if (response.isEmpty()) {
-            throw new PostNotFoundException(id);
-        }
-        Post post = response.get();
+        PostDto post = service.getPostById(id);
         service.deletePostById(id);
         return new ResponseEntity<>("Post entity with id: " + id + " is deleted", HttpStatus.OK);
     }
