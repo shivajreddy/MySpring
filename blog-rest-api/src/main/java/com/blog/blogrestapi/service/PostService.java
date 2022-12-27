@@ -8,11 +8,13 @@ public interface PostService {
 
     PostDto createNewPost(PostDto newPostData);
 
-    PostResponse getAllPosts(int pageNo, int pageSize);
+    PostResponse getAllPosts(int pageNo, int pageSize, String sortBy, String sortDir);
 
     PostDto getPostById(Long id);
 
     PostDto getPostByTitle(String title);
+
+    boolean postWithSameTitleExists(String title);
 
     PostDto updateExistingPost(PostDto existingPost, Long id);
 

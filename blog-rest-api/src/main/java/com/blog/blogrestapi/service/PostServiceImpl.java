@@ -10,10 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -39,7 +41,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public PostResponse getAllPosts(int pageNo, int pageSize) {
+    public PostResponse getAllPosts(int pageNo, int pageSize, String sortBy, String sortDir) {
 
         /* Paging support
          *
@@ -54,19 +56,23 @@ public class PostServiceImpl implements PostService {
          * create a PostResponse class, with a list of all posts, and other fields showing the paging/sorting info.
          * create PostResponse object, and set all the fields, using the Page object.
          * List<T> = Page.getContent();
-         *
          */
-        Pageable pageable = PageRequest.of(pageNo, pageSize);
-        Page<Post> page = repository.findAll(pageable);
-
-        List<Post> posts = page.getContent();
 
         /* Sorting support
          *
          * URL: https://endpoint?pageSize=10&pageNo=2&sortBy=title -> title/id/description
          *
-         * 
+         * create Pageable object using PageRequest.of(int page_no, int page_size, Sort)
+         * Sort -> org.springframework.data.domain.Page;
+         *
          */
+        Sort sort = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortBy).ascending() : Sort.by(sortBy).descending();
+        Pageable pageable = PageRequest.of(pageNo, pageSize, sort);
+
+        Page<Post> page = repository.findAll(pageable);
+
+        List<Post> posts = page.getContent();
+
 
         List<PostDto> content = posts.stream().map(this::mapToDto).collect(Collectors.toList());
 
@@ -77,6 +83,8 @@ public class PostServiceImpl implements PostService {
         postResponse.setTotalElements(page.getTotalElements());
         postResponse.setTotalPages(page.getTotalPages());
         postResponse.setLast(page.isLast());
+        postResponse.setSortBy(page.getSort().toString());
+        // postResponse.setSortDir(page.getSort().ascending().toString());
 
         return postResponse;
     }
@@ -92,6 +100,12 @@ public class PostServiceImpl implements PostService {
     public PostDto getPostByTitle(String title) {
         Post post = repository.findByTitle(title).orElseThrow(() -> new PostNotFoundException("No post found with title: " + title));
         return mapToDto(post);
+    }
+
+    @Override
+    public boolean postWithSameTitleExists(String title) {
+        Optional<Post> post = repository.findByTitle(title);
+        return post.isPresent();
     }
 
     // the Post object expects to have an id, that a pre-existing post object has
@@ -134,3 +148,4 @@ public class PostServiceImpl implements PostService {
     }
 
 }
+

@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -37,9 +36,10 @@ public class PostController {
     public ResponseEntity<PostResponse> getAll(
             @RequestParam(value = "pageNo", defaultValue = "0", required = false) int pageNo,
             @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize,
-            @RequestParam(value="sortBy", defaultValue = "id", required = false) String sortBy
+            @RequestParam(value = "sortBy", defaultValue = "id", required = false) String sortBy,
+            @RequestParam(value = "sortDir", defaultValue = "asc", required = false) String sortDir
     ) {
-        PostResponse allPosts = service.getAllPosts(pageNo, pageSize);
+        PostResponse allPosts = service.getAllPosts(pageNo, pageSize, sortBy, sortDir);
         return new ResponseEntity<>(allPosts, HttpStatus.OK);
     }
 
@@ -58,11 +58,11 @@ public class PostController {
         return new ResponseEntity<>(post, HttpStatus.OK);
     }
 
+    // # New post
     @PostMapping("/new")
     public ResponseEntity<PostDto> createNewPost(@RequestBody PostDto newPostData) {
         // search for duplicate post
-        PostDto postWithSameTitle = service.getPostByTitle(newPostData.getTitle());
-        if (postWithSameTitle != null) {
+        if (service.postWithSameTitleExists(newPostData.getTitle())){
             throw new DuplicateTitleException(newPostData.getTitle());
         }
 
