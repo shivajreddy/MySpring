@@ -1,6 +1,7 @@
 package com.blog.blogrestapi.controller;
 
 import com.blog.blogrestapi.dto.PostDto;
+import com.blog.blogrestapi.dto.PostResponse;
 import com.blog.blogrestapi.exception.DuplicateTitleException;
 import com.blog.blogrestapi.model.Post;
 import com.blog.blogrestapi.service.PostServiceImpl;
@@ -33,11 +34,12 @@ public class PostController {
 
     // Reading with pagination
     @GetMapping("/posts")
-    public ResponseEntity<List<PostDto>> getAll(
+    public ResponseEntity<PostResponse> getAll(
             @RequestParam(value = "pageNo", defaultValue = "0", required = false) int pageNo,
-            @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize
+            @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize,
+            @RequestParam(value="sortBy", defaultValue = "id", required = false) String sortBy
     ) {
-        List<PostDto> allPosts = service.getAllPosts(pageNo, pageSize);
+        PostResponse allPosts = service.getAllPosts(pageNo, pageSize);
         return new ResponseEntity<>(allPosts, HttpStatus.OK);
     }
 

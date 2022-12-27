@@ -1,6 +1,7 @@
 package com.blog.blogrestapi.service;
 
 import com.blog.blogrestapi.dto.PostDto;
+import com.blog.blogrestapi.dto.PostResponse;
 import com.blog.blogrestapi.exception.PostNotFoundException;
 import com.blog.blogrestapi.model.Post;
 import com.blog.blogrestapi.repository.PostRepository;
@@ -11,6 +12,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -37,17 +39,46 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public List<PostDto> getAllPosts(int pageNo, int pageSize) {
+    public PostResponse getAllPosts(int pageNo, int pageSize) {
 
-        // Paging support
+        /* Paging support
+         *
+         * URL: https://endpoint?pageSize=10&pageNo=2
+         *
+         * Pageable -> org.springframework.data.domain;
+         * PageRequest -> org.springframework.data.domain;
+         * Page -> org.springframework.data.domain;
+         *
+         * create 'Pageable object' with PageRequest.of(given_page_no, given_page_size);
+         * create 'Page object' using 'Pageable object', since the JpaRepository has the .findAll(Pageable) method.
+         * create a PostResponse class, with a list of all posts, and other fields showing the paging/sorting info.
+         * create PostResponse object, and set all the fields, using the Page object.
+         * List<T> = Page.getContent();
+         *
+         */
         Pageable pageable = PageRequest.of(pageNo, pageSize);
-        Page<Post> pagePosts = repository.findAll(pageable);
+        Page<Post> page = repository.findAll(pageable);
 
-        List<Post> posts = pagePosts.getContent();
+        List<Post> posts = page.getContent();
 
-        // Sorting support
+        /* Sorting support
+         *
+         * URL: https://endpoint?pageSize=10&pageNo=2&sortBy=title -> title/id/description
+         *
+         * 
+         */
 
-        return posts.stream().map(this::mapToDto).collect(Collectors.toList());
+        List<PostDto> content = posts.stream().map(this::mapToDto).collect(Collectors.toList());
+
+        PostResponse postResponse = new PostResponse();
+        postResponse.setPostContent(content);
+        postResponse.setPageNo(page.getNumber());
+        postResponse.setPageSize(page.getSize());
+        postResponse.setTotalElements(page.getTotalElements());
+        postResponse.setTotalPages(page.getTotalPages());
+        postResponse.setLast(page.isLast());
+
+        return postResponse;
     }
 
     @Override
