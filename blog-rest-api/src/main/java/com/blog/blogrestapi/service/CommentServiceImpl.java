@@ -10,6 +10,8 @@ import com.blog.blogrestapi.repository.PostRepository;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;
@@ -62,6 +64,28 @@ public class CommentServiceImpl implements CommentService {
             throw new BlogAPIException(HttpStatus.BAD_REQUEST, message);
         }
         return mapToDto(comment);
+    }
+
+    @Override
+    public CommentDto updateCommentOfId(long postId, long commentId, CommentDto commentDto) {
+        Post post = postRepository.findById(postId).orElseThrow(
+                () -> new ResourceNotFoundException("Post", "id", postId)
+        );
+        Comment comment = commentRepository.findById(commentId).orElseThrow(
+                () -> new ResourceNotFoundException("Comment", "id", commentId)
+        );
+        if (!comment.getPost().getId().equals(post.getId())) {
+            String message = "Comment with id: " + commentId +
+                    " does not belong to post with id: " + postId;
+            throw new BlogAPIException(HttpStatus.BAD_REQUEST, message);
+        }
+
+        comment.setName(commentDto.getName());
+        comment.setEmail(commentDto.getEmail());
+        comment.setBody(commentDto.getBody());
+        Comment updatedComment = commentRepository.save(comment);
+
+        return mapToDto(updatedComment);
     }
 
     // # convert Entity into Dto
