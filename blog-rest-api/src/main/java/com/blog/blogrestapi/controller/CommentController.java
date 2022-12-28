@@ -1,6 +1,7 @@
 package com.blog.blogrestapi.controller;
 
 import com.blog.blogrestapi.dto.CommentDto;
+import com.blog.blogrestapi.model.Post;
 import com.blog.blogrestapi.service.CommentServiceImpl;
 
 import org.springframework.http.HttpStatus;
@@ -43,6 +44,7 @@ public class CommentController {
         return new ResponseEntity<>(allComments, HttpStatus.OK);
     }
 
+    // comment with id of a particular post
     @GetMapping("/posts/{post_id}/comments/{id}")
     public ResponseEntity<CommentDto> getCommentWithId(@PathVariable long post_id, @PathVariable long id) {
         CommentDto comment = service.getCommentOfId(post_id, id);
