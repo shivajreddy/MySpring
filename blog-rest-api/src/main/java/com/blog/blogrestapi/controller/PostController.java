@@ -5,6 +5,7 @@ import com.blog.blogrestapi.dto.PostResponse;
 import com.blog.blogrestapi.exception.DuplicateTitleException;
 import com.blog.blogrestapi.model.Post;
 import com.blog.blogrestapi.service.PostServiceImpl;
+import com.blog.blogrestapi.utils.AppConstants;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -34,10 +35,10 @@ public class PostController {
     // Reading with pagination
     @GetMapping("/posts")
     public ResponseEntity<PostResponse> getAll(
-            @RequestParam(value = "pageNo", defaultValue = "0", required = false) int pageNo,
-            @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize,
-            @RequestParam(value = "sortBy", defaultValue = "id", required = false) String sortBy,
-            @RequestParam(value = "sortDir", defaultValue = "asc", required = false) String sortDir
+            @RequestParam(value = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
+            @RequestParam(value = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
+            @RequestParam(value = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
+            @RequestParam(value = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir
     ) {
         PostResponse allPosts = service.getAllPosts(pageNo, pageSize, sortBy, sortDir);
         return new ResponseEntity<>(allPosts, HttpStatus.OK);
@@ -62,7 +63,7 @@ public class PostController {
     @PostMapping("/new")
     public ResponseEntity<PostDto> createNewPost(@RequestBody PostDto newPostData) {
         // search for duplicate post
-        if (service.postWithSameTitleExists(newPostData.getTitle())){
+        if (service.postWithSameTitleExists(newPostData.getTitle())) {
             throw new DuplicateTitleException(newPostData.getTitle());
         }
 
