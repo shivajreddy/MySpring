@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping("/api")
 public class CommentController {
 
-    private CommentServiceImpl service;
+    private final CommentServiceImpl service;
 
     public CommentController(CommentServiceImpl service) {
         this.service = service;
@@ -43,4 +43,11 @@ public class CommentController {
         return new ResponseEntity<>(allComments, HttpStatus.OK);
     }
 
+    @GetMapping("/posts/{post_id}/comments/{id}")
+    public ResponseEntity<CommentDto> getCommentWithId(@PathVariable long post_id, @PathVariable long id) {
+        CommentDto comment = service.getCommentOfId(post_id, id);
+        return new ResponseEntity<>(comment, HttpStatus.OK);
+    }
+
 }
+

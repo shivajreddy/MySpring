@@ -10,14 +10,12 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import java.time.LocalTime;
 
 @ControllerAdvice
-public class PostControllerAdvice extends ResponseEntityExceptionHandler {
-
-    // handle duplicate title exception
-    @ExceptionHandler(DuplicateTitleException.class)
-    public ResponseEntity<CustomError> handleDuplicateTitleException(Exception exception, WebRequest request) {
+public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
+    // handle ResourceNotFoundException
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<CustomError> handleResourceNotFoundException(ResourceNotFoundException exception,
+                                                                       WebRequest request) {
         CustomError error = new CustomError(exception.getMessage(), request.getDescription(false), LocalTime.now());
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
-
 }
-

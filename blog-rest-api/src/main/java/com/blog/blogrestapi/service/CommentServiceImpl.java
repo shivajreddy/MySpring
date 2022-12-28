@@ -1,7 +1,7 @@
 package com.blog.blogrestapi.service;
 
 import com.blog.blogrestapi.dto.CommentDto;
-import com.blog.blogrestapi.exception.PostNotFoundException;
+import com.blog.blogrestapi.exception.ResourceNotFoundException;
 import com.blog.blogrestapi.model.Comment;
 import com.blog.blogrestapi.model.Post;
 import com.blog.blogrestapi.repository.CommentRepository;
@@ -10,6 +10,7 @@ import com.blog.blogrestapi.repository.PostRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -25,7 +26,7 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public CommentDto createNewComment(long postId, CommentDto commentData) {
-        Post post = postRepository.findById(postId).orElseThrow(() -> new PostNotFoundException(postId));
+        Post post = postRepository.findById(postId).orElseThrow(() -> new ResourceNotFoundException("Post", "id", postId));
 
         Comment comment = mapToEntity(commentData);
         comment.setPost(post);
@@ -40,11 +41,17 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public List<CommentDto> getAllCommentsForPost(long postId){
+    public List<CommentDto> getAllCommentsForPost(long postId) {
         List<Comment> allComments = commentRepository.findByPostId(postId);
         return allComments.stream().map(this::mapToDto).collect(Collectors.toList());
     }
 
+    @Override
+    public CommentDto getCommentOfId(long postId, long id) {
+        postRepository.findById(postId).orElseThrow(() -> new ResourceNotFoundException("Post", "id", postId));
+        Comment comment = commentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Comment", "id", id));
+        return mapToDto(comment);
+    }
 
     // # convert Entity into Dto
     private CommentDto mapToDto(Comment comment) {

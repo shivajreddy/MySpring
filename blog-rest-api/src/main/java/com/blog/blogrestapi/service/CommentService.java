@@ -12,4 +12,6 @@ public interface CommentService {
     List<CommentDto> getAllComments();
 
     List<CommentDto> getAllCommentsForPost(long postId);
+
+    CommentDto getCommentOfId(long postId, long id);
 }

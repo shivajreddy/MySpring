@@ -2,7 +2,7 @@ package com.blog.blogrestapi.service;
 
 import com.blog.blogrestapi.dto.PostDto;
 import com.blog.blogrestapi.dto.PostResponse;
-import com.blog.blogrestapi.exception.PostNotFoundException;
+import com.blog.blogrestapi.exception.ResourceNotFoundException;
 import com.blog.blogrestapi.model.Post;
 import com.blog.blogrestapi.repository.PostRepository;
 
@@ -13,7 +13,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -84,7 +83,6 @@ public class PostServiceImpl implements PostService {
         postResponse.setTotalPages(page.getTotalPages());
         postResponse.setLast(page.isLast());
         postResponse.setSortBy(page.getSort().toString());
-        // postResponse.setSortDir(page.getSort().ascending().toString());
 
         return postResponse;
     }
@@ -92,13 +90,13 @@ public class PostServiceImpl implements PostService {
     @Override
     public PostDto getPostById(Long id) {
 
-        Post post = repository.findById(id).orElseThrow(() -> new PostNotFoundException(id));
+        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post","id",id));
         return mapToDto(post);
     }
 
     @Override
     public PostDto getPostByTitle(String title) {
-        Post post = repository.findByTitle(title).orElseThrow(() -> new PostNotFoundException("No post found with title: " + title));
+        Post post = repository.findByTitle(title).orElseThrow(() -> new ResourceNotFoundException("Post", "title", title));
         return mapToDto(post);
     }
 
@@ -108,11 +106,10 @@ public class PostServiceImpl implements PostService {
         return post.isPresent();
     }
 
-    // the Post object expects to have an id, that a pre-existing post object has
     @Override
     public PostDto updateExistingPost(PostDto postDto, Long id) {
 
-        Post post = repository.findById(id).orElseThrow(() -> new PostNotFoundException(id));
+        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post","id",id));
 
         post.setTitle(postDto.getTitle());
         post.setContent(postDto.getContent());
@@ -124,7 +121,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public void deletePostById(Long id) {
-        Post post = repository.findById(id).orElseThrow(() -> new PostNotFoundException(id));
+        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post","id",id));
         repository.deleteById(id);
     }
 
