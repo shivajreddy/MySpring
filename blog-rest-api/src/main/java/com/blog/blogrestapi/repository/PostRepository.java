@@ -11,3 +11,4 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     // # custom find method
     Optional<Post> findByTitle(String title);
 }
+

@@ -17,6 +17,5 @@ public class PostResponse {
     private int totalPages;
     private boolean last;
     private String sortBy;
-    // private String sortDir;
 }
 

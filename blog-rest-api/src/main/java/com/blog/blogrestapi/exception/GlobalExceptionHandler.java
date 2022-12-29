@@ -36,4 +36,11 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         CustomError error = new CustomError(exception.getMessage(), request.getDescription(false), LocalTime.now());
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
+
+    // global exception
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<CustomError> handleGlobalError(Exception exception, WebRequest request) {
+        CustomError error = new CustomError(exception.getMessage(), request.getDescription(false), LocalTime.now());
+        return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }

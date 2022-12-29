@@ -6,6 +6,7 @@ import com.blog.blogrestapi.exception.ResourceNotFoundException;
 import com.blog.blogrestapi.model.Post;
 import com.blog.blogrestapi.repository.PostRepository;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -21,22 +22,19 @@ import java.util.stream.Collectors;
 public class PostServiceImpl implements PostService {
 
     private final PostRepository repository;
+    private final ModelMapper modelMapper;
 
     @Autowired
-    public PostServiceImpl(PostRepository repository) {
+    public PostServiceImpl(PostRepository repository, ModelMapper modelMapper) {
         this.repository = repository;
+        this.modelMapper = modelMapper;
     }
 
     @Override
     public PostDto createNewPost(PostDto newPostData) {
-
-        // convert Dto to Entity
         Post post = mapToEntity(newPostData);
         Post newPost = repository.save(post);
-
-        // convert Entity to Dto
         return mapToDto(newPost);
-
     }
 
     @Override
@@ -90,7 +88,7 @@ public class PostServiceImpl implements PostService {
     @Override
     public PostDto getPostById(Long id) {
 
-        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post","id",id));
+        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
         return mapToDto(post);
     }
 
@@ -109,7 +107,7 @@ public class PostServiceImpl implements PostService {
     @Override
     public PostDto updateExistingPost(PostDto postDto, Long id) {
 
-        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post","id",id));
+        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
 
         post.setTitle(postDto.getTitle());
         post.setContent(postDto.getContent());
@@ -121,27 +119,20 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public void deletePostById(Long id) {
-        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post","id",id));
+        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
         repository.deleteById(id);
     }
 
     // # convert Entity into DTO
     private PostDto mapToDto(Post post) {
-        PostDto postDto = new PostDto();
-        postDto.setId(post.getId());
-        postDto.setTitle(post.getTitle());
-        postDto.setDescription(post.getDescription());
-        postDto.setContent(post.getContent());
-        return postDto;
+        // # mapping using ModelMapper
+        return modelMapper.map(post, PostDto.class);
     }
 
     // # convert DTO into Entity
     private Post mapToEntity(PostDto postDto) {
-        Post post = new Post();
-        post.setTitle(postDto.getTitle());
-        post.setDescription(postDto.getDescription());
-        post.setContent(postDto.getContent());
-        return post;
+        // # mapping using ModelMapper
+        return modelMapper.map(postDto, Post.class);
     }
 
 }
