@@ -12,5 +12,8 @@ public interface PostService {
 
     List<PostDto> getAllPosts();
 
+    PostDto updatePostUsingId(long id, PostDto postDto);
+
+    String deletePostUsingId(long id);
 
 }

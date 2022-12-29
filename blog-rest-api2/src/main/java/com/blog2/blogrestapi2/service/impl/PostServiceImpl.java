@@ -34,7 +34,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public PostDto getPostUsingId(long id) {
-        Post post = repository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Post", "id", id));
+        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
         return mapToDto(post);
     }
 
@@ -43,10 +43,33 @@ public class PostServiceImpl implements PostService {
         return repository.findAll().stream().map(this::mapToDto).collect(Collectors.toList());
     }
 
+    @Override
+    public PostDto updatePostUsingId(long id, PostDto postDto) {
 
-    // mapper functions
+        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
+        post.setTitle(postDto.getTitle());
+        post.setDescription(postDto.getDescription());
+        post.setContent(postDto.getContent());
+        Post updatedPost = repository.save(post);
+
+        return mapToDto(updatedPost);
+    }
+
+    @Override
+    public String deletePostUsingId(long id) {
+        Post post = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post", "id", id));
+        repository.delete(post);
+        return "Post with id: " + id + " is deleted";
+    }
+
+    // # mapper functions
     private PostDto mapToDto(Post post) {
         return modelMapper.map(post, PostDto.class);
     }
+
+    private Post mapToEntity(PostDto postDto) {
+        return modelMapper.map(postDto, Post.class);
+    }
+
 
 }
