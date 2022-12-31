@@ -1,6 +1,7 @@
 package com.blog2.blogrestapi2.controller;
 
 import com.blog2.blogrestapi2.dto.PostDto;
+import com.blog2.blogrestapi2.dto.PostResponse;
 import com.blog2.blogrestapi2.service.impl.PostServiceImpl;
 
 import org.springframework.http.HttpStatus;
@@ -12,9 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 
 /* Controller of all routes related to 'post'
@@ -40,9 +40,15 @@ public class PostController {
     }
 
     @GetMapping
-    public ResponseEntity<List<PostDto>> getAllPosts() {
-        List<PostDto> allPosts = service.getAllPosts();
-        return new ResponseEntity<>(allPosts, HttpStatus.OK);
+    public ResponseEntity<PostResponse> getAllPosts(
+            // public ResponseEntity<List<PostDto>> getAllPosts(
+            @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize,
+            @RequestParam(value = "pageNo", defaultValue = "1", required = false) int pageNo,
+            @RequestParam(value = "sortBy", defaultValue = "id", required = false) String sortBy,
+            @RequestParam(value = "sortDirection", defaultValue = "ASC", required = false) String sortDirection
+    ) {
+        PostResponse postResponse = service.getAllPosts(pageNo, pageSize, sortBy, sortDirection);
+        return new ResponseEntity<>(postResponse, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

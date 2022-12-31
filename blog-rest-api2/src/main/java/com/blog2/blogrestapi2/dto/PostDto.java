@@ -1,6 +1,8 @@
 package com.blog2.blogrestapi2.dto;
 
 
+import java.util.Set;
+
 import lombok.Data;
 
 
@@ -10,11 +12,8 @@ import lombok.Data;
 @Data
 public class PostDto {
     private Long id;
-
     private String title;
-
     private String description;
-
     private String content;
-
+    private Set<CommentDto> comments;
 }

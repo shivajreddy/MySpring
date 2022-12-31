@@ -1,12 +1,15 @@
 package com.blog2.blogrestapi2.service.impl;
 
 import com.blog2.blogrestapi2.dto.PostDto;
+import com.blog2.blogrestapi2.dto.PostResponse;
 import com.blog2.blogrestapi2.entity.Post;
 import com.blog2.blogrestapi2.exception.ResourceNotFoundException;
 import com.blog2.blogrestapi2.repository.PostRepository;
 import com.blog2.blogrestapi2.service.PostService;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -39,8 +42,11 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public List<PostDto> getAllPosts() {
-        return repository.findAll().stream().map(this::mapToDto).collect(Collectors.toList());
+    public PostResponse getAllPosts(int pageNo, int pageSize, String sortBy, String sortDirection) {
+        Page<Post> page = repository.findAll(PageRequest.of(pageNo, pageSize));
+        List<Post> pagePosts = page.getContent();
+        List<PostDto> posts = pagePosts.stream().map(this::mapToDto).collect(Collectors.toList());
+        return this.makePostResponse(page, posts);
     }
 
     @Override
@@ -71,5 +77,19 @@ public class PostServiceImpl implements PostService {
         return modelMapper.map(postDto, Post.class);
     }
 
+    private PostResponse makePostResponse(Page<Post> page, List<PostDto> posts) {
 
+        PostResponse postResponse = new PostResponse();
+        postResponse.setPostsInPage(posts);
+        postResponse.setPageNo(page.getNumber());
+        postResponse.setPageSize(page.getSize());
+        postResponse.setTotalElements(page.getTotalElements());
+        postResponse.setTotalPages(page.getTotalPages());
+        postResponse.setLast(page.isLast());
+        postResponse.setSortBy(page.getSort().toString());
+
+        return postResponse;
+
+    }
 }
+
