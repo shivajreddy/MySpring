@@ -57,6 +57,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 
+
     // global exception
     @ExceptionHandler(Exception.class)
     public ResponseEntity<CustomError> handleGlobalError(Exception exception, WebRequest request) {
