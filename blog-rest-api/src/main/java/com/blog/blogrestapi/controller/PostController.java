@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/api")
@@ -60,8 +62,8 @@ public class PostController {
     }
 
     // # New post
-    @PostMapping("/new")
-    public ResponseEntity<PostDto> createNewPost(@RequestBody PostDto newPostData) {
+    @PostMapping("/posts")
+    public ResponseEntity<PostDto> createNewPost(@RequestBody @Valid PostDto newPostData) {
         // search for duplicate post
         if (service.postWithSameTitleExists(newPostData.getTitle())) {
             throw new DuplicateTitleException(newPostData.getTitle());
