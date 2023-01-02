@@ -4,8 +4,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.validation.FieldError;
-import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -48,13 +48,20 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
 
         HashMap<String, String> errors = new HashMap<>();
-        ex.getBindingResult().getAllErrors().forEach((error)->{
-            String fieldName = ((FieldError)error).getField();
+        ex.getBindingResult().getAllErrors().forEach((error) -> {
+            String fieldName = ((FieldError) error).getField();
             String message = error.getDefaultMessage();
             errors.put(fieldName, message);
         });
 
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+    }
+
+    // handle un-authorized exception
+    @ExceptionHandler(AccessDeniedException.class)
+    public ResponseEntity<CustomError> handleAccessDeniedException(AccessDeniedException exception, WebRequest request) {
+        CustomError error = new CustomError(exception.getMessage(), request.getDescription(false), LocalTime.now());
+        return new ResponseEntity<>(error, HttpStatus.UNAUTHORIZED);
     }
 
 
@@ -65,3 +72,4 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
+
