@@ -19,12 +19,17 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
 	implementation 'com.h2database:h2'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.0.1'
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.1'
+
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
