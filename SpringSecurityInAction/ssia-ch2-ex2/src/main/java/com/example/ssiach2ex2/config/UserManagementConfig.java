@@ -9,13 +9,13 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
-@Configuration
+//@Configuration
 public class UserManagementConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
         // 1. Create an UserDetailsService instance
-        InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
+        InMemoryUserDetailsManager userDetailsManager = new InMemoryUserDetailsManager();
 
         // 2. For overriding the basic spring security configuration you need both
         // UserDetailsService and a user in that instance, and a PasswordEncoder
@@ -25,9 +25,9 @@ public class UserManagementConfig {
                 .authorities("read")
                 .build();
 
-        userDetailsService.createUser(user);
+        userDetailsManager.createUser(user);
 
-        return userDetailsService;
+        return userDetailsManager;
     }
 
     // 2.2. create a PasswordEncoder, that our AuthenticationProvider can use to

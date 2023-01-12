@@ -15,8 +15,8 @@ public class WebAuthorizationConfig {
         http.httpBasic();
         http.authorizeHttpRequests()
                 .anyRequest()
-                //.permitAll();
-                .authenticated();
+                .permitAll();
+                //.authenticated();
         return http.build();
     }
 }
