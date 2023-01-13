@@ -8,14 +8,16 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
 
-//@Configuration
+@Configuration
 public class UserManagementConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
         // 1. Create an UserDetailsService instance
         InMemoryUserDetailsManager userDetailsManager = new InMemoryUserDetailsManager();
+        JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager();
 
         // 2. For overriding the basic spring security configuration you need both
         // UserDetailsService and a user in that instance, and a PasswordEncoder
@@ -26,8 +28,10 @@ public class UserManagementConfig {
                 .build();
 
         userDetailsManager.createUser(user);
+        //jdbcUserDetailsManager.createUser(user);
 
         return userDetailsManager;
+        //return jdbcUserDetailsManager;
     }
 
     // 2.2. create a PasswordEncoder, that our AuthenticationProvider can use to
@@ -37,3 +41,4 @@ public class UserManagementConfig {
         return NoOpPasswordEncoder.getInstance();
     }
 }
+
