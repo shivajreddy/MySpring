@@ -22,4 +22,3 @@ public class InMemoryUserDetailsService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException(username + "not found"));
     }
 }
-

@@ -1,5 +1,6 @@
 package com.shiva.ssiach3ex1.model;
 
+import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -7,14 +8,20 @@ import java.util.Collection;
 import java.util.List;
 
 public class User implements UserDetails {
-    private final String username;
-    private final String password;
-    private final String authority;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String username;
+    private String password;
+    private String authority;
 
     public User(String username, String password, String authority) {
         this.username = username;
         this.password = password;
         this.authority = authority;
+    }
+
+    public User() {
     }
 
     @Override
