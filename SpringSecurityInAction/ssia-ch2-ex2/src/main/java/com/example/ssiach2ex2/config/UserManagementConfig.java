@@ -8,37 +8,38 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
 
 @Configuration
 public class UserManagementConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        // 1. Create an UserDetailsService instance
         InMemoryUserDetailsManager userDetailsManager = new InMemoryUserDetailsManager();
-        JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager();
 
-        // 2. For overriding the basic spring security configuration you need both
-        // UserDetailsService and a user in that instance, and a PasswordEncoder
-        // 2.1. create a sample user and save it UserDetailsService instance
+        // directly building
         UserDetails user = User.withUsername("shiva")
                 .password("pass")
                 .authorities("read")
                 .build();
 
         userDetailsManager.createUser(user);
-        //jdbcUserDetailsManager.createUser(user);
+
+        // using UserBuilder
+        User.UserBuilder builder = User.withUsername("shiva2");
+        UserDetails userCreatedWithBuilder = builder.password("pass")
+                .authorities("read")
+                .passwordEncoder((pass) -> passwordEncoder().encode(pass))
+                .disabled(true)
+                .accountExpired(false)
+                .build();
+
+        userDetailsManager.createUser(userCreatedWithBuilder);
 
         return userDetailsManager;
-        //return jdbcUserDetailsManager;
     }
 
-    // 2.2. create a PasswordEncoder, that our AuthenticationProvider can use to
-    // verify a given password
     @Bean
     public PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();
     }
 }
-
