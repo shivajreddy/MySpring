@@ -14,11 +14,15 @@ public class UserService {
         this.repository = repository;
     }
 
-    public List<User> getAllUsers(){
+    public List<User> getAllUsers() {
         return repository.findAll();
     }
 
     public User getUserByUsername(String username) {
         return repository.findByUsername(username);
+    }
+
+    public User addNewUser(User userData) {
+        return repository.save(userData);
     }
 }
