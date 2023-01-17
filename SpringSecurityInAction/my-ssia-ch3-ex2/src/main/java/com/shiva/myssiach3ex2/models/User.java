@@ -1,16 +1,31 @@
 package com.shiva.myssiach3ex2.models;
 
 
+import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
 
+@Entity
+@Table(name = "users")
 public class User implements UserDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column(name = "username", nullable = false)
     private String username;
+    @Column(name = "password", nullable = false)
     private String password;
+    @Column(name = "authority", nullable = false)
     private String authority;
+
+    // constructor for Spring to create entity
+    public User() {
+    }
 
     public User(String username, String password, String authority) {
         this.username = username;
@@ -20,7 +35,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(()->authority);
+        return List.of(() -> authority);
     }
 
     @Override
@@ -33,7 +48,7 @@ public class User implements UserDetails {
         return username;
     }
 
-    public String getAuthority(){
+    public String getAuthority() {
         return authority;
     }
 
