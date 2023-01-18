@@ -21,3 +21,4 @@ public class SignUpController {
         return service.addNewUser(userData);
     }
 }
+
