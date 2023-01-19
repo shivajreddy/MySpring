@@ -1,0 +1,403 @@
+2023-01-18 16:16:10,353 [INFO] com.example.myssiach3ex3.controllers.HelloController [http-nio-8080-exec-8] log test, someone came to /hello
+2023-01-18 16:26:14,997 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96211 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 16:26:14,998 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 16:26:15,039 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 16:26:15,039 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 16:26:15,743 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 16:26:15,751 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 16:26:15,751 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 16:26:15,795 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 16:26:15,796 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 755 ms
+2023-01-18 16:26:15,854 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customAuthenticationProvider' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-01-18 16:26:15,856 [INFO] org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-01-18 16:26:15,868 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-18 16:26:15,888 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.myssiach3ex3.security.CustomAuthenticationProvider required a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' in your configuration.
+
+2023-01-18 16:27:58,988 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96227 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 16:27:58,989 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 16:27:59,022 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 16:27:59,022 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 16:27:59,555 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 16:27:59,561 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 16:27:59,561 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 16:27:59,594 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 16:27:59,595 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 572 ms
+2023-01-18 16:27:59,638 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customAuthenticationProvider' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-01-18 16:27:59,640 [INFO] org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-01-18 16:27:59,650 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-18 16:27:59,664 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.myssiach3ex3.security.CustomAuthenticationProvider required a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' in your configuration.
+
+2023-01-18 19:19:19,463 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96592 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 19:19:19,464 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 19:19:19,495 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 19:19:19,495 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 19:19:20,137 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 19:19:20,144 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 19:19:20,145 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 19:19:20,181 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 19:19:20,181 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 686 ms
+2023-01-18 19:19:20,234 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'projectConfig' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customAuthenticationProvider' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'projectConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2023-01-18 19:19:20,236 [INFO] org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-01-18 19:19:20,248 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-18 19:19:20,264 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  projectConfig defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]
+↑     ↓
+|  customAuthenticationProvider defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2023-01-18 19:24:19,854 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96696 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 19:24:19,855 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 19:24:19,889 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 19:24:19,889 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 19:24:20,517 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 19:24:20,524 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 19:24:20,525 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 19:24:20,559 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 19:24:20,560 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 671 ms
+2023-01-18 19:24:20,613 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'projectConfig': Unsatisfied dependency expressed through field 'authenticationProvider': Error creating bean with name 'customAuthenticationProvider' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'projectConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2023-01-18 19:24:20,615 [INFO] org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-01-18 19:24:20,626 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-18 19:24:20,647 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  projectConfig (field private com.example.myssiach3ex3.security.CustomAuthenticationProvider com.example.myssiach3ex3.config.ProjectConfig.authenticationProvider)
+↑     ↓
+|  customAuthenticationProvider defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2023-01-18 19:24:31,183 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96702 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 19:24:31,184 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 19:24:31,215 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 19:24:31,215 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 19:24:31,786 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 19:24:31,793 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 19:24:31,793 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 19:24:31,825 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 19:24:31,825 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 610 ms
+2023-01-18 19:24:31,870 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'projectConfig': Unsatisfied dependency expressed through field 'authenticationProvider': Error creating bean with name 'customAuthenticationProvider' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'projectConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2023-01-18 19:24:31,871 [INFO] org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-01-18 19:24:31,882 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-18 19:24:31,895 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  projectConfig (field private com.example.myssiach3ex3.security.CustomAuthenticationProvider com.example.myssiach3ex3.config.ProjectConfig.authenticationProvider)
+↑     ↓
+|  customAuthenticationProvider defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2023-01-18 19:24:38,273 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96708 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 19:24:38,275 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 19:24:38,305 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 19:24:38,305 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 19:24:38,870 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 19:24:38,876 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 19:24:38,876 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 19:24:38,908 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 19:24:38,909 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 604 ms
+2023-01-18 19:24:39,255 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@44375cc0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5fbeb254, org.springframework.security.web.context.SecurityContextHolderFilter@7c3305a8, org.springframework.security.web.header.HeaderWriterFilter@32c7fd55, org.springframework.security.web.csrf.CsrfFilter@59df29c3, org.springframework.security.web.authentication.logout.LogoutFilter@444c049b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e2de664, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6a74b68c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1c2ea89d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@31b554f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f97a9e8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8e2d946, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b30e3be, org.springframework.security.web.access.ExceptionTranslationFilter@45a14572, org.springframework.security.web.access.intercept.AuthorizationFilter@45309e73]
+2023-01-18 19:24:39,274 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-01-18 19:24:39,295 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-18 19:24:39,301 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Started MySsiaCh3Ex3Application in 1.28 seconds (process running for 1.644)
+2023-01-18 19:24:51,981 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96713 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 19:24:51,982 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 19:24:52,026 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 19:24:52,026 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 19:24:52,657 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 19:24:52,664 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 19:24:52,664 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 19:24:52,700 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 19:24:52,700 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 673 ms
+2023-01-18 19:24:52,748 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'projectConfig' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customAuthenticationProvider' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'projectConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2023-01-18 19:24:52,749 [INFO] org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-01-18 19:24:52,760 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-18 19:24:52,781 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  projectConfig defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]
+↑     ↓
+|  customAuthenticationProvider defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2023-01-18 19:25:07,005 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96720 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 19:25:07,006 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 19:25:07,038 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 19:25:07,038 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 19:25:07,611 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 19:25:07,617 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 19:25:07,617 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 19:25:07,650 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 19:25:07,651 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 612 ms
+2023-01-18 19:25:07,694 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'projectConfig' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customAuthenticationProvider' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'projectConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2023-01-18 19:25:07,695 [INFO] org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-01-18 19:25:07,707 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-18 19:25:07,719 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  projectConfig defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]
+↑     ↓
+|  customAuthenticationProvider defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2023-01-18 19:29:15,638 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96770 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 19:29:15,639 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 19:29:15,671 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 19:29:15,671 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 19:29:16,296 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 19:29:16,303 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 19:29:16,304 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 19:29:16,339 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 19:29:16,340 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 667 ms
+2023-01-18 19:29:16,428 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configure' defined in class path resource [com/example/myssiach3ex3/config/ProjectConfig.class]: Invalid factory method 'configure' on class [com.example.myssiach3ex3.config.ProjectConfig]: needs to have a non-void return type!
+2023-01-18 19:29:16,430 [INFO] org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-01-18 19:29:16,447 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-18 19:29:16,464 [ERROR] org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configure' defined in class path resource [com/example/myssiach3ex3/config/ProjectConfig.class]: Invalid factory method 'configure' on class [com.example.myssiach3ex3.config.ProjectConfig]: needs to have a non-void return type!
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:630)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.example.myssiach3ex3.MySsiaCh3Ex3Application.main(MySsiaCh3Ex3Application.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-01-18 19:29:25,640 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96778 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 19:29:25,641 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 19:29:25,673 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 19:29:25,673 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 19:29:26,251 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 19:29:26,258 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 19:29:26,258 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 19:29:26,291 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 19:29:26,291 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 618 ms
+2023-01-18 19:29:26,335 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'projectConfig' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customAuthenticationProvider' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'projectConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2023-01-18 19:29:26,336 [INFO] org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-01-18 19:29:26,347 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-18 19:29:26,365 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  projectConfig defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]
+↑     ↓
+|  customAuthenticationProvider defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2023-01-18 19:31:00,039 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96802 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 19:31:00,040 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 19:31:00,074 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 19:31:00,074 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 19:31:00,648 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 19:31:00,655 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 19:31:00,655 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 19:31:00,688 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 19:31:00,688 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 613 ms
+2023-01-18 19:31:00,731 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'projectConfig' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customAuthenticationProvider' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'projectConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2023-01-18 19:31:00,733 [INFO] org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-01-18 19:31:00,743 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-18 19:31:00,756 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  projectConfig defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]
+↑     ↓
+|  customAuthenticationProvider defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2023-01-18 19:31:59,021 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96823 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 19:31:59,023 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 19:31:59,057 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 19:31:59,057 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 19:31:59,620 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 19:31:59,627 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 19:31:59,627 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 19:31:59,658 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 19:31:59,658 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 601 ms
+2023-01-18 19:31:59,701 [WARN] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'projectConfig' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customAuthenticationProvider' defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'projectConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2023-01-18 19:31:59,703 [INFO] org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2023-01-18 19:31:59,714 [INFO] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-18 19:31:59,726 [ERROR] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  projectConfig defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/config/ProjectConfig.class]
+↑     ↓
+|  customAuthenticationProvider defined in file [/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes/com/example/myssiach3ex3/security/CustomAuthenticationProvider.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2023-01-18 19:32:17,692 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Starting MySsiaCh3Ex3Application using Java 19 with PID 96832 (/Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3/target/classes started by smbp in /Users/smbp/Desktop/MySpring/SpringSecurityInAction/my-ssia-ch3-ex3)
+2023-01-18 19:32:17,693 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-01-18 19:32:17,725 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-18 19:32:17,725 [INFO] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-18 19:32:18,304 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2023-01-18 19:32:18,310 [INFO] org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2023-01-18 19:32:18,310 [INFO] org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-18 19:32:18,342 [INFO] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2023-01-18 19:32:18,343 [INFO] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 618 ms
+2023-01-18 19:32:18,697 [INFO] org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2e82f8ce, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b48ffb1, org.springframework.security.web.context.SecurityContextHolderFilter@1bff8f62, org.springframework.security.web.header.HeaderWriterFilter@666644a9, org.springframework.security.web.csrf.CsrfFilter@1152b25c, org.springframework.security.web.authentication.logout.LogoutFilter@3174ec57, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7fa44c2f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@8ed117, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6ebcb382, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@e856d52, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b724ff0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21ae5eb6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2601b6fa, org.springframework.security.web.access.ExceptionTranslationFilter@1ae11103, org.springframework.security.web.access.intercept.AuthorizationFilter@39309876]
+2023-01-18 19:32:18,724 [INFO] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-01-18 19:32:18,745 [INFO] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-18 19:32:18,752 [INFO] com.example.myssiach3ex3.MySsiaCh3Ex3Application [restartedMain] Started MySsiaCh3Ex3Application in 1.323 seconds (process running for 1.784)
