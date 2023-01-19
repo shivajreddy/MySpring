@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:8-oracle
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass@123
+      - MYSQL_USER=shiva
+      - MYSQL_PASSWORD=pass@123
+      - MYSQL_DATABASE=test_db
+    ports:
+      - "3307:3307"
+    restart: always
+    volumes:
+      - dbdata:/var/lib/mysql
+
+volumes:
+  dbdata:
+

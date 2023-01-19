@@ -1,5 +1,6 @@
 package com.shiva.springsecurity.ssch3ex1.security.filters;
 
+import com.shiva.springsecurity.ssch3ex1.security.authentication.CustomAuthentication;
 import com.shiva.springsecurity.ssch3ex1.security.managers.CustomAuthenticationManager;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -28,16 +29,19 @@ public class CustomAuthenticationFilter extends OncePerRequestFilter {
         // 3. get back the authentication object that was authenticated
         // 4. if the object has successfully authentication, send the request to the next filter in the chain
 
+
         // 1.
-        var a = customAuthenticationManager.authenticate(null);
+        String key = request.getHeader("key");
+        CustomAuthentication ca = new CustomAuthentication(false, key);
+
+        // 2.
+        var a = customAuthenticationManager.authenticate(ca);
 
         // 3,4
         if (a.isAuthenticated()){
             SecurityContextHolder.getContext().setAuthentication(a);
             filterChain.doFilter(request, response); // only when authentication worked
         }
-
-
 
     }
 }

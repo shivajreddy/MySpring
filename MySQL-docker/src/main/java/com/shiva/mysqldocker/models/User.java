@@ -1,12 +1,17 @@
 package com.shiva.mysqldocker.models;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "_user")
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class User {
 
     @Id
@@ -14,23 +19,15 @@ public class User {
     private Long id;
 
     @Column(name = "name")
-    //@NotNull
     private String name;
 
     @Column(name = "password")
-    //@NotNull
     private String password;
 
-    public User() {
-    }
-
-    public User(String name, String password) {
-        this.name = name;
-        this.password = password;
-    }
 
     @Override
     public String toString() {
         return "User[" + name + " " + password + "]";
     }
 }
+

@@ -27,35 +27,9 @@ public class UserController {
     }
 
     @PostMapping("/new")
+    //public User makeANewUser(@RequestBody UserDao userData) {
     public User makeANewUser(@RequestBody User userData) {
-        System.out.println("input" + userData);
         return service.addNewUser(userData);
     }
-
 }
 
-/* terminal command
-
-docker run --detach
- --env MYSQL_ROOT_PASSWORD=dummypassword
- --env MYSQL_USER=social-media-user
- --env MYSQL_PASSWORD=dummypassword
- --env MYSQL_DATABASE=social-media-database
- --name mysql
- --publish 3306:3306
- mysql:8-oracle
-
- docker run --detach
- --env MYSQL_ROOT_PASSWORD=pass@123
- --env MYSQL_USER=shiva
- --env MYSQL_PASSWORD=pass@123
- --env MYSQL_DATABASE=docker_db
- --name mysql
- --publish 3306:3306
- mysql:8-oracle
-
-docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=social-media-user --env MYSQL_PASSWORD=dummypassword --env MYSQL_DATABASE=social-media-database --name mysql --publish 3306:3306 mysql:8-oracle
-
-docker run --detach --env MYSQL_ROOT_PASSWORD=pass@123 --env MYSQL_USER=shiva --env MYSQL_PASSWORD=pass@123 --env MYSQL_DATABASE=docker_db --name mysql --publish 3306:3306 mysql:8-oracle
-
- */

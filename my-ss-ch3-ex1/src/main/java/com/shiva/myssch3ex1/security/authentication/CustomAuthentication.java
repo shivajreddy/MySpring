@@ -1,10 +1,12 @@
-package com.shiva.springsecurity.ssch3ex1.security.authentication;
+package com.shiva.myssch3ex1.security.authentication;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 
@@ -13,9 +15,13 @@ import java.util.Collection;
 @Setter
 public class CustomAuthentication implements Authentication {
 
-    private boolean authenticationStatus;
+    private final boolean authenticationStatus;
     private final String key;
 
+    @Override
+    public boolean isAuthenticated() {
+        return authenticationStatus;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -37,10 +43,6 @@ public class CustomAuthentication implements Authentication {
         return null;
     }
 
-    @Override
-    public boolean isAuthenticated() {
-        return authenticationStatus;
-    }
 
     @Override
     public void setAuthenticated(boolean isAuthenticated) throws IllegalArgumentException {
