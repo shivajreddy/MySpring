@@ -1,12 +1,10 @@
 package com.shiva.ssc4e1.config.authentication;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 
+import javax.security.auth.Subject;
 import java.util.Collection;
 
 
@@ -48,6 +46,11 @@ public class ApiKeyAuthentication implements Authentication {
     @Override
     public Object getPrincipal() {
         return null;
+    }
+
+    @Override
+    public boolean implies(Subject subject) {
+        return Authentication.super.implies(subject);
     }
 
     @Override

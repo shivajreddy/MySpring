@@ -18,7 +18,7 @@ public class CustomAuthenticationManager implements AuthenticationManager {
         ApiKeyProvider provider = new ApiKeyProvider(key);
 
         if (provider.supports(authentication.getClass())) {
-            provider.authenticate(authentication);
+            return provider.authenticate(authentication);
         }
 
         return authentication;
