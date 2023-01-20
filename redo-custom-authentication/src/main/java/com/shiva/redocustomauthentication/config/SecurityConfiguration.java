@@ -1,26 +1,27 @@
 package com.shiva.redocustomauthentication.config;
 
 import com.shiva.redocustomauthentication.config.security.filter.CustomFilter;
-import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 @Configuration
-@AllArgsConstructor
 public class SecurityConfiguration {
 
-    private final CustomFilter customFilter;
+    @Value("${some.secret.some.where}")
+    private String secretKey;
+
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         return http
-                .addFilterAt(customFilter, UsernamePasswordAuthenticationFilter.class)
-                .authorizeHttpRequests().anyRequest().authenticated()
-                .and()
+                .httpBasic().and()
+                .addFilterBefore(new CustomFilter(secretKey), BasicAuthenticationFilter.class)
+                .authorizeHttpRequests().anyRequest().authenticated().and()
                 .build();
     }
 }

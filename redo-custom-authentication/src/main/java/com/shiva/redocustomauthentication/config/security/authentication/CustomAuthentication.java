@@ -1,16 +1,14 @@
 package com.shiva.redocustomauthentication.config.security.authentication;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Collection;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
-@Setter
 public class CustomAuthentication implements Authentication {
 
     private boolean authenticationStatus;

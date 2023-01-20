@@ -6,17 +6,16 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.stereotype.Component;
 
 
-@Component
 @AllArgsConstructor
 public class CustomAuthenticationManager implements AuthenticationManager {
 
-    private final CustomAuthenticationProvider customAuthenticationProvider;
+    private final String secretKey;
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+        CustomAuthenticationProvider customAuthenticationProvider = new CustomAuthenticationProvider(secretKey);
         if (customAuthenticationProvider.supports(authentication.getClass())) {
             Authentication result = customAuthenticationProvider.authenticate(authentication);
             if (result.isAuthenticated()) {
