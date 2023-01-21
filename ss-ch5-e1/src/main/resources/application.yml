@@ -2,3 +2,8 @@ spring:
   main:
     banner-mode: off
 
+
+some:
+  place:
+    deep:
+      simple
