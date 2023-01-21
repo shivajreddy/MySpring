@@ -30,7 +30,7 @@ public class SecurityConfiguration {
                 })
 
                 //.formLogin(Customizer.withDefaults())
-                .csrf().disable()
+                .csrf().disable() // ONLY TO TEST POST ROUTE, NEVER DO THIS
                 .build();
     }
 
