@@ -1,17 +1,19 @@
 package com.shiva.ss.ssch7e1.security;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 
 @Configuration
+@EnableMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration {
 
     @Bean
@@ -19,17 +21,12 @@ public class SecurityConfiguration {
 
         return http.httpBasic().and()
 
-                //.authorizeHttpRequests().anyRequest().authenticated().and()
 
                 .authorizeHttpRequests(auth -> {
-                    auth.requestMatchers("/admin/**").hasRole("admin");
-                    auth.requestMatchers(HttpMethod.POST, "/demo/**").hasRole("user");
-                    auth.requestMatchers("/public").permitAll();
                     auth.anyRequest().authenticated();
                 })
 
-                //.formLogin(Customizer.withDefaults())
-                .csrf().disable() // ONLY TO TEST POST ROUTE, NEVER DO THIS
+
                 .build();
     }
 
@@ -38,22 +35,29 @@ public class SecurityConfiguration {
         return new InMemoryUserDetailsManager(
                 User.builder()
                         .username("shiva")
-                        .password("{noop}pass")
+                        //.password("{noop}pass")
+                        .password(passwordEncoder().encode("pass"))
                         .roles("user")
                         .build(),
 
                 User.builder()
                         .username("admin")
-                        .password("{noop}pass")
+                        //.password("{noop}pass")
+                        .password(passwordEncoder().encode("pass"))
                         .roles("user", "admin")
                         .build(),
 
                 User.builder()
                         .username("boo")
-                        .password("{noop}pass")
+                        //.password("{noop}pass")
+                        .password(passwordEncoder().encode("pass"))
                         .roles("meow")
                         .build()
         );
     }
-}
 
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}
